@@ -78,11 +78,13 @@ export default {
       backgroundImage: {
         'gradient-gold': 'var(--gradient-gold)',
         'gradient-dark': 'var(--gradient-dark)',
+        'gradient-light': 'var(--gradient-light)',
       },
       boxShadow: {
         gold: "var(--shadow-gold)",
         "gold-lg": "var(--shadow-gold-lg)",
         elegant: "var(--shadow-elegant)",
+        brutal: "var(--shadow-brutal)",
       },
       transitionTimingFunction: {
         'smooth': 'cubic-bezier(0.4, 0, 0.2, 1)',

@@ -50,24 +50,24 @@ export const Hero = () => {
 
   const fallbackData: HeroData = useMemo(() => isGe
     ? {
-        title: "Steigern Sie Ihre organische Sichtbarkeit mit professionellem SEO",
+        title: "Steigern Sie Ihre Leads mit professionellem Ad-Management",
         subtitle:
-          "Professionelle SEO-Dienstleistungen für Unternehmen in der DACH-Region. Technisches SEO, Content-Strategie und Link-Building für mehr Traffic.",
+          "Professionelle Werbekampagnen und Call-Center-Services für Unternehmen in der DACH-Region. Google Ads, Meta Ads und Performance-Marketing für mehr Leads.",
         tagline: "Von 200+ wachsenden Unternehmen vertraut",
         image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=900&fit=crop&q=80",
         ctaPrimary: "Jetzt starten",
         urgency: "Begrenztes Angebot",
-        stats: { clients: "200+", costSaved: "70%", rating: "4.9/5" },
+        stats: { clients: "200+", costSaved: "3× ROAS", rating: "4.9/5" },
       }
     : {
-        title: "Grow Your Organic Traffic with Professional SEO Services",
+        title: "Grow Your Leads with Professional Ad Management",
         subtitle:
-          "Professional SEO services for businesses in the DACH region. Technical SEO, content strategy, and link building to grow your traffic.",
+          "Professional ad campaigns and call center services for businesses in the DACH region. Google Ads, Meta Ads, and performance marketing to grow your revenue.",
         tagline: "Trusted by 200+ Growing Businesses",
         image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=900&fit=crop&q=80",
         ctaPrimary: "Get Started Today",
         urgency: "Limited Offer",
-        stats: { clients: "200+", costSaved: "70%", rating: "4.9/5" },
+        stats: { clients: "200+", costSaved: "3× ROAS", rating: "4.9/5" },
       }, [isGe]);
 
   const [heroData, setHeroData] = useState<HeroData | null>(fallbackData);
@@ -175,24 +175,17 @@ export const Hero = () => {
                 stiffness: 120,
                 damping: 20,
               }}
-              className="inline-block mb-3 sm:mb-4 md:mb-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-gold/10 border border-gold/30 rounded-full text-xs sm:text-sm font-semibold hover:bg-gold/20 hover:scale-105 transition-all duration-300 cursor-default"
+              className="inline-block mb-3 sm:mb-4 md:mb-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] border border-white/20 rounded-full text-white text-xs sm:text-sm font-semibold hover:scale-105 transition-all duration-300 cursor-default relative overflow-hidden"
             >
-              <motion.span
-                animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                className="bg-gradient-to-r from-gold via-brand-blue to-gold bg-[length:200%_100%] bg-clip-text text-transparent"
-              >
-                {tagline}
-              </motion.span>
+              <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50" />
+              <span className="relative z-10">{tagline}</span>
             </motion.div>
 
-            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-5 md:mb-6 leading-[1.15] sm:leading-[1.12] md:leading-[1.1]">
-              <span className="bg-gradient-to-r from-[hsl(var(--gold))] to-[hsl(var(--brand-blue))] bg-clip-text text-transparent">
-                {title}
-              </span>
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-7xl font-extrabold mb-4 sm:mb-5 md:mb-6 leading-[1.15] sm:leading-[1.12] md:leading-[1.1] tracking-tight text-black dark:text-white">
+              {title}
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground mb-3 sm:mb-4 md:mb-5 leading-relaxed max-w-xl">
+            <p className="text-base sm:text-lg md:text-xl lg:text-xl text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 md:mb-5 leading-relaxed max-w-xl font-normal">
               {subtitle}
             </p>
 

@@ -21,10 +21,10 @@ export const Footer: React.FC = () => {
         { label: "Contact Us", href: "/en/contact" },
       ],
       serviceLinks: [
-        { label: "Technical SEO", href: "/en/#services" },
-        { label: "Content Strategy", href: "/en/#services" },
-        { label: "Link Building", href: "/en/#services" },
-        { label: "SEO Audits", href: "/en/#services" },
+        { label: "Google Ads", href: "/en/#services" },
+        { label: "Meta Ads", href: "/en/#services" },
+        { label: "Call Center", href: "/en/#services" },
+        { label: "Performance Marketing", href: "/en/#services" },
         { label: "Pricing Plans", href: "/en/#pricing" },
       ],
       resourceLinks: [
@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
         { label: "FAQ", href: "/en/#faq" },
         { label: "Testimonials", href: "/en/#testimonials" },
       ],
-      tagline: "Professional SEO services to grow your organic traffic and improve search rankings.",
+      tagline: "Professional ad management and call center services to grow your leads and revenue.",
       rights: "All rights reserved.",
     },
     ge: {
@@ -47,10 +47,10 @@ export const Footer: React.FC = () => {
         { label: "Kontakt", href: "/de/contact" },
       ],
       serviceLinks: [
-        { label: "Technisches SEO", href: "/de/#services" },
-        { label: "Content-Strategie", href: "/de/#services" },
-        { label: "Link-Building", href: "/de/#services" },
-        { label: "SEO Audits", href: "/de/#services" },
+        { label: "Google Ads", href: "/de/#services" },
+        { label: "Meta Ads", href: "/de/#services" },
+        { label: "Call Center", href: "/de/#services" },
+        { label: "Performance Marketing", href: "/de/#services" },
         { label: "Preispläne", href: "/de/#pricing" },
       ],
       resourceLinks: [
@@ -60,7 +60,7 @@ export const Footer: React.FC = () => {
         { label: "FAQ", href: "/de/#faq" },
         { label: "Testimonials", href: "/de/#testimonials" },
       ],
-      tagline: "Professionelle SEO-Dienste zur Steigerung Ihres organischen Traffics und besserer Rankings.",
+      tagline: "Professionelles Ad-Management und Call-Center-Services für mehr Leads und Umsatz.",
       rights: "Alle Rechte vorbehalten.",
     },
   };
@@ -134,7 +134,7 @@ export const Footer: React.FC = () => {
 
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-border/50 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} Don SEO. {c.rights}</p>
+          <p>© {new Date().getFullYear()} {siteConfig.brandName}. {c.rights}</p>
           <div className="flex items-center gap-4">
             <Link href={localizedPath(lang, siteConfig.routes.blog)} className="hover:text-gold transition-colors">Blog</Link>
             <Link href={localizedPath(lang, siteConfig.routes.contact)} className="hover:text-gold transition-colors">{isGe ? "Kontakt" : "Contact"}</Link>

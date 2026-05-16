@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Poppins } from "next/font/google";
 import { headers } from "next/headers";
+import Script from "next/script";
 import "./globals.css";
 import "@/styles/main.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -30,30 +31,62 @@ export const viewport: Viewport = {
   ],
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "DON ADS",
+  url: SITE_URL,
+  logo: absoluteUrl("/favicon.ico"),
+  description:
+    "Professional ad management and call center services for growing businesses in the DACH region and worldwide.",
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    availableLanguage: ["English", "German"],
+  },
+  areaServed: [
+    { "@type": "Country", name: "Germany" },
+    { "@type": "Country", name: "Austria" },
+    { "@type": "Country", name: "Switzerland" },
+    { "@type": "Place", name: "Worldwide" },
+  ],
+  sameAs: ["https://linkedin.com/company/don-ads", "https://twitter.com/don_ads"],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "DON ADS",
+  url: SITE_URL,
+  inLanguage: ["en-US", "de-DE"],
+  publisher: { "@type": "Organization", name: "DON ADS" },
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   verification: {
-    google: "l93HxOLqUBDjtuNfHM7OsWQd7i9MfSJo1fV_yaLAZrE",
+    google: "0OlTu41Tz0RTHRVt4WDBqer5e4sECs-KHKVyi6GZxmY",
   },
   title: {
-    default: "DON SEO - Professional SEO Services | Grow Your Organic Traffic",
-    template: "%s | DON SEO",
+    default: "DON ADS - Professional Ad Management | Grow Your Leads & Revenue",
+    template: "%s | DON ADS",
   },
   description:
-    "Professional SEO services for businesses in the DACH region. Technical SEO, content strategy, and link building to grow your organic traffic.",
+    "Professional ad management and call center services for businesses in the DACH region. Google Ads, Meta Ads, and performance campaigns to grow your leads and revenue.",
   keywords: [
-    "SEO services",
-    "search engine optimization",
-    "technical SEO",
-    "content strategy",
-    "link building",
-    "DON SEO",
-    "SEO Agentur",
-    "Suchmaschinenoptimierung",
+    "ad management",
+    "Google Ads",
+    "Meta Ads",
+    "call center",
+    "paid media",
+    "performance marketing",
+    "DON ADS",
+    "Werbung schalten",
+    "Online-Werbung",
   ],
-  authors: [{ name: "DON SEO", url: SITE_URL }],
-  creator: "DON SEO",
-  publisher: "DON SEO",
+  authors: [{ name: "DON ADS", url: SITE_URL }],
+  creator: "DON ADS",
+  publisher: "DON ADS",
   formatDetection: {
     email: false,
     address: false,
@@ -72,20 +105,20 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    siteName: "DON SEO",
-    title: "DON SEO - Professional SEO Services | Grow Your Organic Traffic",
+    siteName: "DON ADS",
+    title: "DON ADS - Professional Ad Management | Grow Your Leads & Revenue",
     description:
-      "Professional SEO services for businesses in the DACH region. Technical SEO, content strategy, and link building.",
+      "Professional ad management and call center services for businesses in the DACH region. Google Ads, Meta Ads, and performance campaigns.",
     url: absoluteUrl("/en"),
     locale: "en_US",
     alternateLocale: ["de_DE"],
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "DON SEO — Professional SEO Services" }],
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "DON ADS — Professional Ad Management" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "DON SEO - Professional SEO Services | Grow Your Organic Traffic",
+    title: "DON ADS - Professional Ad Management | Grow Your Leads & Revenue",
     description:
-      "Professional SEO services for businesses in the DACH region. Technical SEO, content strategy, and link building.",
+      "Professional ad management and call center services for businesses in the DACH region. Google Ads, Meta Ads, and performance campaigns.",
     images: [absoluteUrl("/og-image.jpg")],
   },
   alternates: {
@@ -98,37 +131,6 @@ export const metadata: Metadata = {
   },
 };
 
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "DON SEO",
-  url: SITE_URL,
-  logo: absoluteUrl("/favicon.ico"),
-  description:
-    "Professional SEO services for growing businesses in the DACH region and worldwide.",
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "customer service",
-    availableLanguage: ["English", "German"],
-  },
-  areaServed: [
-    { "@type": "Country", name: "Germany" },
-    { "@type": "Country", name: "Austria" },
-    { "@type": "Country", name: "Switzerland" },
-    { "@type": "Place", name: "Worldwide" },
-  ],
-  sameAs: ["https://linkedin.com/company/don-seo", "https://twitter.com/don_seo"],
-};
-
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "DON SEO",
-  url: SITE_URL,
-  inLanguage: ["en-US", "de-DE"],
-  publisher: { "@type": "Organization", name: "DON SEO" },
-};
-
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -137,18 +139,18 @@ export default async function RootLayout({
 
   return (
     <html lang={htmlLang} suppressHydrationWarning className={`${inter.variable} ${poppins.variable}`}>
-      <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LNDGNQ7Z74" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-LNDGNQ7Z74');
-            `,
-          }}
-        />
+      <head suppressHydrationWarning />
+      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
+        {process.env.NODE_ENV === "development" && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `(function(){var o=console.error;console.error=function(){var a=arguments[0];if(typeof a==='string'&&(a.includes('bis_skin_checked')||a.includes('bis_use')||a.includes('chrome-extension')))return;o.apply(console,arguments);};})();`,
+            }}
+          />
+        )}
+        <a href="#main-content" className="skip-to-content">
+          Skip to main content
+        </a>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
@@ -157,11 +159,6 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
-      </head>
-      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
-        <a href="#main-content" className="skip-to-content">
-          Skip to main content
-        </a>
         <DesignSystemProvider defaultTheme="blue">
           <ThemeProvider
             attribute="class"
@@ -171,6 +168,16 @@ export default async function RootLayout({
           >
             {children}
             <Toaster />
+            <Script
+              src="https://www.googletagmanager.com/gtag/js?id=G-FK6N732M42"
+              strategy="afterInteractive"
+            />
+            <Script id="gtag-init" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-FK6N732M42');`}
+            </Script>
           </ThemeProvider>
         </DesignSystemProvider>
       </body>

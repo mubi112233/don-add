@@ -50,10 +50,10 @@ export const WhyChooseUs = () => {
     ]
   } : {
     badge: "Why Choose Us",
-    heading: "The Perfect SEO Solution",
-    description: "Experience the difference with our professional SEO experts who are trained to deliver exceptional results.",
+    heading: "The Perfect Ads Solution",
+    description: "Experience the difference with our professional ad specialists and call center agents trained to deliver exceptional results.",
     items: [
-      { icon: "Target", title: "Expertly Vetted Professionals", description: "Every SEO expert is carefully screened and tested to ensure they meet our high standards of excellence." },
+      { icon: "Target", title: "Expertly Vetted Professionals", description: "Every ads specialist is carefully screened and tested to ensure they meet our high standards of excellence." },
       { icon: "Shield", title: "Secure & Confidential", description: "Your data and business information are protected with enterprise-grade security measures." },
       { icon: "Zap", title: "Lightning Fast Results", description: "Get started within 24 hours. Our streamlined process ensures you see improvements quickly." },
       { icon: "HeartHandshake", title: "Dedicated Support", description: "Our team is always available to ensure smooth collaboration and address any concerns." },
@@ -80,7 +80,7 @@ export const WhyChooseUs = () => {
 
   if (loading) {
     return (
-      <section className="py-8 sm:py-10 md:py-14 lg:py-16 bg-background text-foreground z-30 overflow-hidden min-h-[500px]">
+      <section className="py-8 sm:py-10 md:py-14 lg:py-16 bg-muted/30 text-foreground z-30 overflow-hidden min-h-[500px]">
         <div className={`container mx-auto ${SPACING.container}`}>
 
           <div className="flex items-center justify-center py-20">
@@ -100,7 +100,7 @@ export const WhyChooseUs = () => {
 
   return (
     <motion.section 
-      className="relative py-8 sm:py-10 md:py-12 lg:py-14 bg-background z-40"
+      className="relative py-8 sm:py-10 md:py-12 lg:py-14 bg-muted/30 z-40"
       initial={{ opacity: 0, y: 200 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
@@ -108,17 +108,18 @@ export const WhyChooseUs = () => {
     >
       <div className={`container mx-auto ${SPACING.container}`}>
         <motion.div 
-          className="mb-10 sm:mb-12 md:mb-16 lg:mb-20 text-left"
+          className="mb-8 sm:mb-10 md:mb-12 lg:mb-16 text-left"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gold text-foreground text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4">
-            {badge}
+          <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden">
+            <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50" />
+            <span className="relative z-10">{badge}</span>
           </span>
           <h2 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-5 md:mb-6 text-foreground px-2"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-5 md:mb-6 text-[hsl(222,47%,20%)] dark:text-white leading-tight tracking-tight px-2"
             dangerouslySetInnerHTML={{ __html: heading }}
           />
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed px-2">

@@ -33,7 +33,7 @@ const plans: PricingPlan[] = [
     price: 369,
     setupFee: 149,
     features: [
-      "Dedicated SEO Specialist",
+      "Dedicated Ads Specialist",
       "Native Quality Control", 
       "24h Replacement Guarantee",
       "Slack/Email Support",
@@ -79,16 +79,12 @@ const plans: PricingPlan[] = [
 export const Pricing = () => {
   const [vaCount, setVaCount] = useState(1);
   
-  const getLangFromPath = () => {
-    const match = window.location.pathname.match(/^\/(en|ge|de)\b/i);
-    const raw = match?.[1]?.toLowerCase() || "en";
-    return raw === "de" ? "ge" : raw;
-  };
-
   const [currentLang, setCurrentLang] = useState<string>("en");
 
   useEffect(() => {
-    setCurrentLang(getLangFromPath());
+    const match = window.location.pathname.match(/^\/(en|ge|de)\b/i);
+    const raw = match?.[1]?.toLowerCase() || "en";
+    setCurrentLang(raw === "de" ? "ge" : raw);
   }, []);
 
   const copy = getCopy(currentLang, 'pricing');
@@ -108,7 +104,7 @@ export const Pricing = () => {
   return (
     <motion.section 
       id="pricing"
-      className={`relative ${SPACING.section} ${SPACING.sideMargin} bg-background text-foreground z-10 overflow-hidden`}
+      className={`relative ${SPACING.section} bg-background text-foreground z-10 overflow-hidden`}
       initial={{ opacity: 0, y: 200 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.1 }}
@@ -226,12 +222,13 @@ export const Pricing = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <motion.span 
-            className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gold text-foreground text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-md"
+            className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden"
             whileHover={{ scale: 1.05 }}
           >
-            {copy.sectionBadge}
+            <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50" />
+            <span className="relative z-10">{copy.sectionBadge}</span>
           </motion.span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-foreground leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-[hsl(222,47%,20%)] dark:text-white leading-tight tracking-tight">
             {copy.sectionTitle}
           </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed">
@@ -382,7 +379,7 @@ export const Pricing = () => {
               <div className={`relative rounded-2xl p-6 sm:p-8 md:p-10 transition-all duration-500 group h-full ${
                 plan.highlighted 
                   ? 'bg-gradient-to-br from-primary/95 via-primary/98 to-primary text-foreground shadow-[0_25px_70px_-15px_hsl(220_100%_50%/0.5)]' 
-                  : 'bg-card border-2 border-border/60 hover:border-primary/80 hover:shadow-[0_25px_70px_-15px_hsl(220_100%_50%/0.4)]'
+                  : 'bg-card border-2 border-gold/20 hover:border-gold hover:shadow-[0_25px_70px_-15px_hsl(45_80%_55%/0.4)]'
               }`}>
                 {/* Top accent line with animation */}
                 <motion.div 

@@ -39,7 +39,9 @@ export async function generateMetadata({
       ? "Professionelle SEO-Dienste für Unternehmen in der DACH-Region. Technisches SEO, Content-Strategie und Link-Building für mehr organischen Traffic."
       : "Professional SEO services for businesses in the DACH region. Technical SEO, content strategy, and link building to grow your organic traffic.");
   const keywordsFromHero = hero?.metaKeywords
-    ? hero.metaKeywords.split(",").map((k: string) => k.trim())
+    ? (Array.isArray(hero.metaKeywords)
+        ? hero.metaKeywords
+        : hero.metaKeywords.split(",").map((k: string) => k.trim()))
     : null;
   const defaultDeKeywords = [
     "SEO Agentur",

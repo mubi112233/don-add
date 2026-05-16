@@ -21,14 +21,14 @@ const fallbackCopy = {
   en: {
     badge: "Ready to Scale?",
     headlineLine1: "Start with",
-    headlineLine2: "DON SEO Today",
+    headlineLine2: "DON ADS Today",
     subheading:
-      "Book a free consultation and see how we can improve your rankings in 30 days.",
-    benefits: ["No setup fees", "30-day trial", "SEO experts", "Monthly reporting"],
-    stats: { activeClients: "200+", avgRoi: "340%", satisfaction: "98%", fastStart: "30d" },
+      "Book a free consultation and see how we can grow your leads and revenue in 30 days.",
+    benefits: ["No setup fees", "30-day trial", "Ads experts", "Monthly reporting"],
+    stats: { activeClients: "200+", avgRoi: "3× ROAS", satisfaction: "98%", fastStart: "30d" },
     statsLabels: {
       activeClients: "Active Clients",
-      avgRoi: "Traffic Growth",
+      avgRoi: "Avg. ROAS",
       satisfaction: "Satisfaction",
       fastStart: "First Results",
     },
@@ -47,14 +47,14 @@ const fallbackCopy = {
   ge: {
     badge: "Bereit zu skalieren?",
     headlineLine1: "Starten Sie noch heute",
-    headlineLine2: "mit DON SEO",
+    headlineLine2: "mit DON ADS",
     subheading:
-      "Buchen Sie eine kostenlose Beratung und erleben Sie, wie wir Ihre Rankings in 30 Tagen verbessern.",
-    benefits: ["Keine Einrichtungsgebühren", "30-Tage-Test", "SEO-Experten", "Monatliches Reporting"],
-    stats: { activeClients: "200+", avgRoi: "340%", satisfaction: "98%", fastStart: "30d" },
+      "Buchen Sie eine kostenlose Beratung und erleben Sie, wie wir Ihre Leads und Umsätze in 30 Tagen steigern.",
+    benefits: ["Keine Einrichtungsgebühren", "30-Tage-Test", "Ads-Experten", "Monatliches Reporting"],
+    stats: { activeClients: "200+", avgRoi: "3× ROAS", satisfaction: "98%", fastStart: "30d" },
     statsLabels: {
       activeClients: "Aktive Kunden",
-      avgRoi: "Traffic-Wachstum",
+      avgRoi: "Ø ROAS",
       satisfaction: "Zufriedenheit",
       fastStart: "Erste Ergebnisse",
     },
@@ -147,7 +147,7 @@ export async function FinalCTA({ lang }: { lang: string }) {
             </div>
           </div>
 
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 sm:mb-8 text-white leading-[1.1]">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 sm:mb-8 text-white leading-[1.1] tracking-tight">
             <span className="block drop-shadow-lg">{c.headlineLine1}</span>
             <span className="relative inline-block mt-2">
               <span className="relative z-10 bg-gradient-to-r from-white via-amber-50 to-white bg-clip-text text-transparent drop-shadow-2xl">

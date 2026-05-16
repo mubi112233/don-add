@@ -21,14 +21,8 @@ const decodeHtml = (value: string) => {
     .replace(/&amp;/g, "&");
 };
 
-const slugify = (title: string) => {
-  return title
-    .toLowerCase()
-    .replace(/[^\w\s-]/g, "")
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-")
-    .trim();
-};
+const slugify = (title: string) =>
+  title.toLowerCase().replace(/[^\w\s-]/g, "").replace(/\s+/g, "-").replace(/-+/g, "-").trim();
 
 interface BlogPost {
   blogId: number;
@@ -61,16 +55,12 @@ export const Blog = () => {
         setLoading(true);
         setError(null);
         const data = await fetchBlog(currentLang);
-
         if (!data) throw new Error("Failed to fetch blogs");
-
         const fetchedBlogs = Array.isArray((data as any).blogs)
           ? (data as any).blogs.sort(
-              (a: BlogPost, b: BlogPost) =>
-                (a.order || 0) - (b.order || 0) || a.blogId - b.blogId
+              (a: BlogPost, b: BlogPost) => (a.order || 0) - (b.order || 0) || a.blogId - b.blogId
             )
           : [];
-
         setPosts(fetchedBlogs);
       } catch (err) {
         setError(err instanceof Error ? err.message : "Failed to load blogs");
@@ -79,16 +69,14 @@ export const Blog = () => {
         setLoading(false);
       }
     };
-
     fetchBlogs();
   }, [currentLang]);
 
+  const sectionClass = `relative ${SPACING.section} bg-background overflow-hidden`;
+
   if (loading) {
     return (
-      <motion.section
-        id="blog"
-        className={`relative ${SPACING.section} ${SPACING.sideMargin} bg-background overflow-hidden`}
-      >
+      <motion.section id="blog" className={sectionClass}>
         <div className={`container mx-auto ${SPACING.container}`}>
           <div className="flex items-center justify-center py-20">
             <Loader2 className="w-8 h-8 animate-spin text-gold" />
@@ -100,16 +88,11 @@ export const Blog = () => {
 
   if (error || posts.length === 0) {
     return (
-      <motion.section
-        id="blog"
-        className={`relative ${SPACING.section} ${SPACING.sideMargin} bg-background overflow-hidden`}
-      >
+      <motion.section id="blog" className={sectionClass}>
         <div className={`container mx-auto ${SPACING.container}`}>
           <div className="text-center py-20">
             <p className="text-muted-foreground">
-              {error || (currentLang === "ge"
-                ? "Keine Blog-Artikel verfügbar."
-                : "No blog posts available.")}
+              {error || (currentLang === "ge" ? "Keine Blog-Artikel verfügbar." : "No blog posts available.")}
             </p>
           </div>
         </div>
@@ -120,7 +103,7 @@ export const Blog = () => {
   return (
     <motion.section
       id="blog"
-      className={`relative ${SPACING.section} ${SPACING.sideMargin} bg-background overflow-hidden`}
+      className={sectionClass}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -130,15 +113,16 @@ export const Blog = () => {
       <div className="absolute bottom-0 right-1/4 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-gold/5 rounded-full blur-[100px] md:blur-[150px]" />
 
       <div className={`container mx-auto ${SPACING.container} relative z-10`}>
-        <div className="mb-12 sm:mb-16 lg:mb-20 text-left max-w-5xl">
-          <span className="inline-block px-4 py-2 bg-gold text-foreground text-sm font-bold rounded-full mb-4 shadow-md">
-            {copy.badge}
+        <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16 text-left">
+          <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden">
+            <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50" />
+            <span className="relative z-10">{copy.badge}</span>
           </span>
           <h2
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 text-foreground leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-[hsl(222,47%,20%)] dark:text-white leading-tight tracking-tight"
             dangerouslySetInnerHTML={{ __html: decodeHtml(copy.heading) }}
           />
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
             {copy.description}
           </p>
         </div>
@@ -154,17 +138,18 @@ export const Blog = () => {
             >
               <Link
                 href={`/${currentLang}/blog/${slugify(post.title)}-${post.blogId || post.id}`}
-                className="group bg-card border border-border/50 rounded-xl sm:rounded-2xl overflow-hidden hover:border-gold/50 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 w-full block h-full"
+                className="group bg-card border-2 border-gold/20 rounded-xl sm:rounded-2xl overflow-hidden hover:border-gold hover:shadow-[0_25px_80px_-20px_hsl(45_80%_55%/0.4)] transition-all duration-700 w-full flex flex-col h-full"
               >
-                {/* Image */}
-                <div className="relative h-44 sm:h-52 md:h-48 lg:h-56 overflow-hidden">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
+                <div className="relative h-44 sm:h-52 md:h-48 lg:h-56 overflow-hidden flex-shrink-0">
+                  {post.image ? (
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                  ) : null}
                   <div className="absolute top-4 left-4">
                     <span className="px-3 py-1 bg-gold text-foreground text-xs font-bold rounded-full">
                       {post.category}
@@ -172,8 +157,7 @@ export const Blog = () => {
                   </div>
                 </div>
 
-                {/* Content */}
-                <div className="p-4 sm:p-5 lg:p-6 flex flex-col h-full">
+                <div className="p-4 sm:p-5 lg:p-6 flex flex-col flex-1">
                   <div className="flex items-center gap-3 sm:gap-4 text-xs text-muted-foreground mb-3 sm:mb-4">
                     <div className="flex items-center gap-1">
                       <Calendar className="w-3 h-3" />
@@ -186,11 +170,11 @@ export const Blog = () => {
                     </div>
                   </div>
 
-                  <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-2 sm:mb-3 text-foreground group-hover:text-gold transition-colors line-clamp-2 flex-grow">
+                  <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-2 sm:mb-3 text-foreground group-hover:text-gold transition-colors line-clamp-2">
                     {post.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-6 line-clamp-2 sm:line-clamp-3">
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-6 line-clamp-3 flex-1">
                     {post.excerpt}
                   </p>
 
@@ -198,7 +182,7 @@ export const Blog = () => {
                     <span className="text-xs sm:text-sm text-muted-foreground truncate">
                       {copy.by} {post.author}
                     </span>
-                    <div className="flex items-center gap-1 sm:gap-2 text-gold font-semibold text-xs sm:text-sm group-hover:gap-2 sm:group-hover:gap-3 transition-all flex-shrink-0">
+                    <div className="flex items-center gap-1 sm:gap-2 text-gold font-semibold text-xs sm:text-sm group-hover:gap-3 transition-all flex-shrink-0">
                       <span className="hidden sm:inline">{copy.readMore}</span>
                       <span className="sm:hidden">{copy.read}</span>
                       <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />

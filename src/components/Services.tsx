@@ -19,12 +19,12 @@ const sectionCopy = {
   en: {
     badge: "Services",
     heading: "Our Services",
-    description: "Comprehensive SEO solutions tailored to your business needs. From technical optimization to content strategy, we've got you covered.",
+    description: "Comprehensive ad management and call center solutions tailored to your business needs. From Google Ads to performance campaigns, we've got you covered.",
   },
   ge: {
     badge: "Dienstleistungen",
     heading: "Unsere Dienstleistungen",
-    description: "Umfassende SEO-Lösungen, die auf Ihre Geschäftsbedürfnisse zugeschnitten sind. Von technischer Optimierung bis hin zur Content-Strategie.",
+    description: "Umfassendes Ad-Management und Call-Center-Lösungen, die auf Ihre Geschäftsbedürfnisse zugeschnitten sind. Von Google Ads bis hin zu Performance-Kampagnen.",
   },
 };
 
@@ -61,7 +61,7 @@ export const Services = () => {
 
   if (loading) {
     return (
-      <motion.section id="services" className="relative py-8 sm:py-10 md:py-14 lg:py-16 bg-background text-foreground z-30 overflow-hidden min-h-[500px]">
+      <motion.section id="services" className="relative py-8 sm:py-10 md:py-14 lg:py-16 bg-muted/30 text-foreground z-30 overflow-hidden min-h-[500px]">
         <div className={`container mx-auto ${SPACING.container}`}>
           <div className="flex items-center justify-center py-20">
             <Loader2 className="w-8 h-8 animate-spin text-gold" />
@@ -73,7 +73,7 @@ export const Services = () => {
 
   if (error || services.length === 0) {
     return (
-      <motion.section id="services" className="relative py-8 sm:py-10 md:py-14 lg:py-16 bg-background text-foreground z-30 overflow-hidden min-h-[500px]">
+      <motion.section id="services" className="relative py-8 sm:py-10 md:py-14 lg:py-16 bg-muted/30 text-foreground z-30 overflow-hidden min-h-[500px]">
         <div className={`container mx-auto ${SPACING.container}`}>
           <div className="text-center py-20">
             <p className="text-muted-foreground mb-4">
@@ -88,7 +88,7 @@ export const Services = () => {
   return (
     <motion.section
       id="services"
-      className="relative py-8 sm:py-10 md:py-14 lg:py-16 bg-background text-foreground z-30 overflow-hidden min-h-[500px]"
+      className="relative py-8 sm:py-10 md:py-14 lg:py-16 bg-muted/30 text-foreground z-30 overflow-hidden min-h-[500px]"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.05 }}
@@ -112,10 +112,11 @@ export const Services = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 bg-gold text-foreground text-xs sm:text-sm md:text-base font-semibold rounded-full mb-3 sm:mb-4">
-            {copy.badge}
+          <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 md:py-2.5 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm md:text-base font-semibold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden">
+            <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50" />
+            <span className="relative z-10">{copy.badge}</span>
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-left">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-[hsl(222,47%,20%)] dark:text-white leading-tight tracking-tight text-left">
             {copy.heading}
           </h2>
           <p className="text-base sm:text-lg md:text-lg lg:text-xl text-muted-foreground max-w-3xl leading-relaxed px-2">
@@ -135,31 +136,31 @@ export const Services = () => {
             return (
               <motion.div
                 key={service._id || service.order}
-                className="relative bg-card/50 backdrop-blur-sm border-2 border-border p-5 sm:p-6 md:p-7 lg:p-9 xl:p-10 rounded-xl sm:rounded-2xl hover:bg-card hover:border-gold/50 hover:shadow-[0_25px_80px_-20px_hsl(45_80%_55%/0.4)] transition-all duration-700 group overflow-hidden"
+                className="relative bg-card backdrop-blur-sm border-2 border-gold/20 p-5 sm:p-6 md:p-7 lg:p-9 rounded-xl sm:rounded-2xl hover:border-gold hover:shadow-[0_25px_80px_-20px_hsl(45_80%_55%/0.4)] transition-all duration-700 group overflow-hidden"
                 variants={{
                   hidden: { opacity: 0, y: 60, scale: 0.9 },
                   visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: [0.6, -0.05, 0.01, 0.99] } },
                 }}
-                whileHover={{ y: -12, scale: 1.03, transition: { duration: 0.3 } }}
+                whileHover={{ y: -8, scale: 1.02, transition: { duration: 0.3 } }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row items-start gap-4 sm:gap-5 md:gap-5 lg:gap-6 relative z-10">
+                <div className="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="flex flex-row items-start gap-5 sm:gap-6 relative z-10">
                   <motion.div
-                    className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 md:w-14 md:h-14 lg:w-16 lg:h-16 rounded-lg sm:rounded-xl bg-gold text-foreground flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-[0_10px_30px_-10px_hsl(45_80%_55%/0.5)]"
+                    className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gold/10 text-gold flex items-center justify-center group-hover:bg-gold group-hover:text-foreground group-hover:scale-110 transition-all duration-500 shadow-[0_10px_30px_-10px_hsl(45_80%_55%/0.4)]"
                     animate={{ y: [0, -5, 0] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: index * 0.2 }}
                   >
-                    <IconComponent className="w-7 h-7 sm:w-8 sm:h-8 md:w-7 md:h-7 lg:w-8 lg:h-8" />
+                    <IconComponent className="w-7 h-7 sm:w-8 sm:h-8" />
                   </motion.div>
                   <div className="flex-1 w-full">
-                    <h3 className="text-xl sm:text-2xl md:text-xl lg:text-2xl font-bold mb-2 sm:mb-3 md:mb-3 text-foreground group-hover:text-gold transition-colors duration-300">
+                    <h3 className="text-xl sm:text-2xl font-bold mb-2 sm:mb-3 text-foreground group-hover:text-gold transition-colors duration-300">
                       {service.title}
                     </h3>
-                    <p className="text-sm sm:text-base md:text-sm lg:text-base text-muted-foreground mb-3 sm:mb-4 md:mb-4 leading-relaxed">
+                    <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4 leading-relaxed">
                       {service.description}
                     </p>
-                    <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 md:px-3.5 md:py-1.5 lg:px-4 lg:py-2 bg-gold/10 border border-gold/30 rounded-full text-gold text-xs sm:text-sm md:text-xs lg:text-sm font-semibold group-hover:bg-gold group-hover:text-foreground group-hover:border-gold transition-all duration-500">
-                      <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-3.5 md:h-3.5 lg:w-4 lg:h-4 mr-1.5 sm:mr-2 md:mr-1.5 lg:mr-2" />
+                    <div className="inline-flex items-center px-3 py-1.5 sm:px-4 sm:py-2 bg-gold/10 border border-gold/30 rounded-full text-gold text-xs sm:text-sm font-semibold group-hover:bg-gold group-hover:text-foreground group-hover:border-gold transition-all duration-500">
+                      <TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1.5 sm:mr-2" />
                       <span className="leading-none">{service.benefit}</span>
                     </div>
                   </div>

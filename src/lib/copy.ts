@@ -9,28 +9,28 @@ export const copy = {
     // How It Works
     howItWorks: {
       badge: "How It Works",
-      heading: "Get started in <span class=\"text-gold\">4 simple steps</span>",
-      description: "From audit to measurable rankings — our process is designed to deliver SEO results fast.",
+      heading: "Launch your ads in <span class=\"text-gold\">4 simple steps</span>",
+      description: "From strategy to live campaigns — our process is designed to deliver paid ad results fast.",
       steps: {
         step1: {
           step: "Step 1",
           title: "Initial Consultation",
-          description: "We analyze your website and competitors to create a customized SEO strategy."
+          description: "We audit your current ad spend and competitors to build a winning paid media strategy."
         },
         step2: {
-          step: "Step 2", 
-          title: "SEO Strategy & Planning",
-          description: "We develop a tailored SEO roadmap with technical fixes, content, and link building."
+          step: "Step 2",
+          title: "Campaign Strategy & Planning",
+          description: "We craft a tailored ad roadmap covering Google Ads, Meta, and call center campaigns."
         },
         step3: {
           step: "Step 3",
-          title: "Implementation & Optimization",
-          description: "We execute the SEO plan with technical improvements, content optimization, and link acquisition."
+          title: "Launch & Optimization",
+          description: "We go live with your campaigns and continuously optimize bids, creatives, and targeting."
         },
         step4: {
           step: "Step 4",
-          title: "Monitoring & Growth",
-          description: "Continuous tracking, reporting, and optimization to improve rankings and organic traffic."
+          title: "Monitoring & Scaling",
+          description: "Real-time tracking, transparent reporting, and scaling what works to maximize your ROI."
         }
       }
     },
@@ -39,17 +39,17 @@ export const copy = {
     whyChooseUs: {
       badge: "Why Choose Us",
       heading: "What makes us <span class=\"text-gold\">different</span>",
-      description: "Data-driven strategies, technical excellence, transparent reporting, and measurable ROI.",
+      description: "Performance-driven ad management, dedicated call center support, transparent reporting, and measurable ROI.",
     },
 
     // Testimonials
     testimonials: {
       heading: "Trusted by <span class=\"text-gold\">Growing Businesses</span>",
-      subheading: "Real results from real companies growing with DON SEO.",
+      subheading: "Real results from real companies scaling with DON ADS.",
       caseStudy: {
         badge: "Success Story",
-        title: "Case Study: <span class=\"text-gold\">70% Cost Reduction</span>",
-        description: "See how a mid-sized e-commerce company increased organic traffic by 340% and reduced their cost per acquisition by 60%.",
+        title: "Case Study: <span class=\"text-gold\">3× ROAS in 60 Days</span>",
+        description: "See how a mid-sized e-commerce brand tripled their return on ad spend and cut cost-per-lead by 55% with DON ADS.",
         cta: "View Full Case Study",
       },
     },
@@ -58,7 +58,7 @@ export const copy = {
     blog: {
       badge: "Insights",
       heading: "Latest <span class=\"text-gold\">Insights</span>",
-      description: "Practical guides and strategies for improving your search rankings and organic traffic.",
+      description: "Practical guides and strategies for maximizing your paid ad performance and lead generation.",
       by: "By",
       readMore: "Read more",
       read: "Read",
@@ -68,7 +68,7 @@ export const copy = {
     caseStudies: {
       badge: "Success Stories",
       heading: "Real <span class=\"text-gold\">Success Stories</span>",
-      description: "Proven results from companies growing their organic presence with DON SEO.",
+      description: "Proven results from companies scaling their paid media with DON ADS.",
       labels: {
         saved: "Saved",
         teamSize: "Team Size",
@@ -82,13 +82,13 @@ export const copy = {
     faq: {
       badge: "FAQ",
       title: "Frequently Asked Questions",
-      description: "Answers to the most common questions about our service, quality control, and security.",
+      description: "Answers to the most common questions about our ad management, call center services, and quality control.",
       qualityCardTitle: "Native Quality Control",
-      qualityCardText: "Dedicated supervisors review outputs and coach continuously to maintain standards.",
+      qualityCardText: "Dedicated supervisors review campaign outputs and coach agents continuously to maintain standards.",
       toolsCardTitle: "Works with Your Tools",
-      toolsCardText: "We plug into your existing workflows and platforms without disrupting your operations.",
+      toolsCardText: "We integrate with your existing CRM, ad platforms, and workflows without disrupting operations.",
       stillHaveQuestionsTitle: "Still have questions?",
-      stillHaveQuestionsText: "We're here to help you choose the right setup for your needs.",
+      stillHaveQuestionsText: "We're here to help you choose the right ad setup for your needs.",
       contactSupport: "Contact Support",
       viewPricing: "View Pricing",
     },
@@ -98,8 +98,8 @@ export const copy = {
       sectionBadge: "Pricing",
       sectionTitle: "Simple, transparent pricing",
       sectionDescription: "Choose a plan that fits your needs. Scale up or down anytime.",
-      vaCountLabel: "Select your SEO plan",
-      vaCountHelper: "Choose the right SEO package for your business",
+      vaCountLabel: "Select your ads plan",
+      vaCountHelper: "Choose the right ad management package for your business",
       startingFrom: "Starting from €{price}/mo · ~€{hourly}/hr",
       bulkDiscount: "{percent}% bulk discount applied!",
       bulkSavings: "You save €{amount} total",
@@ -117,7 +117,7 @@ export const copy = {
           name: "Starter",
           hours: "10h / week",
           features: [
-            "Dedicated SEO Specialist",
+            "Dedicated Ads Specialist",
             "Native Quality Control",
             "24h Replacement Guarantee",
             "Slack/Email Support",
@@ -131,7 +131,7 @@ export const copy = {
             "Everything in Starter",
             "No Setup Fee",
             "Priority Support",
-            "Bi-weekly Progress Reports",
+            "Bi-weekly Performance Reports",
             "Flexible Hour Rollover"
           ]
         },
@@ -159,8 +159,8 @@ export const copy = {
     // Final CTA
     finalCTA: {
       badge: "Ready to Scale?",
-      title: "Start with <span class=\"text-gold\">DON SEO</span> Today",
-      description: "Book a free consultation and see how we can improve your rankings in 30 days.",
+      title: "Start with <span class=\"text-gold\">DON ADS</span> Today",
+      description: "Book a free consultation and see how we can grow your leads and revenue in 30 days.",
     },
 
     // Value Proposition (if used)
@@ -174,27 +174,27 @@ export const copy = {
     howItWorks: {
       badge: "Wie es funktioniert",
       heading: "Starten Sie in <span class=\"text-gold\">4 einfachen Schritten</span>",
-      description: "Vom Audit bis zu messbaren Rankings – unser Prozess liefert schnelle SEO-Ergebnisse.",
+      description: "Von der Strategie bis zur Live-Kampagne – unser Prozess liefert schnelle Ergebnisse im Paid Advertising.",
       steps: {
         step1: {
           step: "Schritt 1",
           title: "Erstberatung",
-          description: "Wir analysieren Ihre Website und Konkurrenz, um eine maßgeschneiderte SEO-Strategie zu entwickeln."
+          description: "Wir analysieren Ihr aktuelles Ad-Budget und die Konkurrenz, um eine gewinnbringende Paid-Media-Strategie zu entwickeln."
         },
         step2: {
           step: "Schritt 2",
-          title: "SEO-Strategie & Planung",
-          description: "Wir entwickeln eine maßgeschneiderte SEO-Roadmap mit technischen Fixes, Content und Link-Building."
+          title: "Kampagnenstrategie & Planung",
+          description: "Wir erstellen eine maßgeschneiderte Roadmap für Google Ads, Meta und Call-Center-Kampagnen."
         },
         step3: {
           step: "Schritt 3",
-          title: "Implementierung & Optimierung",
-          description: "Wir führen den SEO-Plan mit technischen Verbesserungen, Content-Optimierung und Link-Aufbau aus."
+          title: "Launch & Optimierung",
+          description: "Wir starten Ihre Kampagnen und optimieren kontinuierlich Gebote, Creatives und Targeting."
         },
         step4: {
           step: "Schritt 4",
-          title: "Monitoring & Wachstum",
-          description: "Kontinuierliches Tracking, Reporting und Optimierung zur Verbesserung der Rankings und organischen Sichtbarkeit."
+          title: "Monitoring & Skalierung",
+          description: "Echtzeit-Tracking, transparentes Reporting und Skalierung der erfolgreichsten Kampagnen für maximalen ROI."
         }
       }
     },
@@ -203,17 +203,17 @@ export const copy = {
     whyChooseUs: {
       badge: "Warum wir",
       heading: "Was uns <span class=\"text-gold\">auszeichnet</span>",
-      description: "Datengesteuerte Strategien, technische Exzellenz, transparentes Reporting und messbarer ROI.",
+      description: "Performance-orientiertes Ad-Management, dedizierter Call-Center-Support, transparentes Reporting und messbarer ROI.",
     },
 
     // Testimonials
     testimonials: {
       heading: "Vertrauen von <span class=\"text-gold\">wachsenden Unternehmen</span>",
-      subheading: "Echte Ergebnisse von Unternehmen, die mit DON SEO wachsen.",
+      subheading: "Echte Ergebnisse von Unternehmen, die mit DON ADS wachsen.",
       caseStudy: {
         badge: "Erfolgsgeschichte",
-        title: "Fallstudie: <span class=\"text-gold\">70% Kostensenkung</span>",
-        description: "Erfahren Sie, wie ein mittelständisches E-Commerce-Unternehmen den organischen Traffic um 340% steigerte und die Akquisitionskosten um 60% senkte.",
+        title: "Fallstudie: <span class=\"text-gold\">3× ROAS in 60 Tagen</span>",
+        description: "Erfahren Sie, wie eine mittelständische E-Commerce-Marke ihren ROAS verdreifachte und die Kosten pro Lead um 55% senkte.",
         cta: "Vollständige Fallstudie ansehen",
       },
     },
@@ -232,7 +232,7 @@ export const copy = {
     caseStudies: {
       badge: "Erfolgsgeschichten",
       heading: "Echte <span class=\"text-gold\">Erfolgsgeschichten</span>",
-      description: "Bewährte Ergebnisse von Unternehmen, die ihre organische Präsenz mit DON SEO ausbauen.",
+      description: "Bewährte Ergebnisse von Unternehmen, die ihr Paid-Media-Wachstum mit DON ADS skalieren.",
       labels: {
         saved: "Gespart",
         teamSize: "Teamgröße",
@@ -323,8 +323,8 @@ export const copy = {
     // Final CTA
     finalCTA: {
       badge: "Bereit zu skalieren?",
-      title: "Starten Sie noch heute mit <span class=\"text-gold\">DON SEO</span>",
-      description: "Buchen Sie eine kostenlose Beratung und erleben Sie, wie wir Ihre Rankings in 30 Tagen verbessern können."
+      title: "Starten Sie noch heute mit <span class=\"text-gold\">DON ADS</span>",
+      description: "Buchen Sie eine kostenlose Beratung und erleben Sie, wie wir Ihre Leads und Umsätze in 30 Tagen steigern können."
     },
 
     // Value Proposition (if used)

@@ -23,7 +23,7 @@ export async function CaseStudies({ lang }: { lang: string }) {
     return (
       <section
         id="case-studies"
-        className="relative py-8 sm:py-10 md:py-12 lg:py-14 bg-background"
+        className="relative py-8 sm:py-10 md:py-12 lg:py-14 bg-muted/30"
       >
         <div className={`container mx-auto ${SPACING.container}`}>
           <div className="text-center py-20">
@@ -41,21 +41,22 @@ export async function CaseStudies({ lang }: { lang: string }) {
   return (
     <section
       id="case-studies"
-      className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-background"
+      className="relative py-8 sm:py-10 md:py-12 lg:py-14 bg-muted/30"
     >
       <div className="absolute top-0 left-1/4 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-gold/5 rounded-full blur-[100px] md:blur-[150px]" />
       <div className="absolute bottom-0 right-1/4 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-gold/5 rounded-full blur-[100px] md:blur-[150px]" />
 
       <div className={`container mx-auto ${SPACING.container} relative z-10`}>
-        <div className="mb-12 sm:mb-16 lg:mb-20 text-left max-w-5xl">
-          <span className="inline-block px-4 py-2 bg-gold text-foreground text-sm font-bold rounded-full mb-4 shadow-md">
-            {copy.badge}
+        <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16 text-left">
+          <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden">
+            <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50" />
+            <span className="relative z-10">{copy.badge}</span>
           </span>
           <h2
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 text-foreground leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-[hsl(222,47%,20%)] dark:text-white leading-tight tracking-tight"
             dangerouslySetInnerHTML={{ __html: copy.heading }}
           />
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground max-w-4xl leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
             {copy.description}
           </p>
         </div>
@@ -65,7 +66,7 @@ export async function CaseStudies({ lang }: { lang: string }) {
             <Link
               key={study.id}
               href={`/${urlSeg}/case-study/${slugify(study.title)}-${study.id}`}
-              className="group bg-card border border-border/50 rounded-xl sm:rounded-2xl overflow-hidden hover:border-gold/50 hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.2)] transition-all duration-300 hover:-translate-y-2 w-full block"
+              className="group bg-card border-2 border-gold/20 rounded-xl sm:rounded-2xl overflow-hidden hover:border-gold hover:shadow-[0_25px_80px_-20px_hsl(45_80%_55%/0.4)] transition-all duration-700 hover:-translate-y-2 w-full block"
             >
               <div className="relative h-44 sm:h-52 md:h-48 lg:h-56 overflow-hidden">
                 <Image

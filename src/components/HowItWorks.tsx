@@ -40,17 +40,21 @@ export function HowItWorks({ lang }: { lang?: string } = {}) {
     >
       <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16">
         <motion.div
-          className="mb-10 sm:mb-16 md:mb-20 text-left"
+          className="mb-8 sm:mb-10 md:mb-12 lg:mb-16 text-left"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <span className="inline-block px-4 py-2 bg-foreground text-gold text-sm font-semibold rounded-full mb-4">
-            {copy.badge}
-          </span>
+          <motion.span
+            className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden"
+            whileHover={{ scale: 1.05 }}
+          >
+            <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50" />
+            <span className="relative z-10">{copy.badge}</span>
+          </motion.span>
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-[hsl(222,47%,20%)] dark:text-white leading-tight tracking-tight"
             dangerouslySetInnerHTML={{ __html: copy.heading }}
           />
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">

@@ -17,12 +17,12 @@ export function FAQInteractive({ faqs, lang }: { faqs: FAQItem[]; lang: string }
   return (
     <section
       id="faq"
-      className="relative py-8 sm:py-10 md:py-12 lg:py-14 bg-gradient-to-b from-background via-muted/30 to-background z-80 overflow-hidden"
+      className="relative py-8 sm:py-10 md:py-12 lg:py-14 bg-muted/30 z-80 overflow-hidden"
     >
       <div className="absolute top-20 right-10 w-64 h-64 bg-gold/5 rounded-full blur-[100px]" />
       <div className="absolute bottom-20 left-10 w-64 h-64 bg-gold/5 rounded-full blur-[100px]" />
 
-      <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-4 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 relative z-10">
         <div className="max-w-4xl mx-auto">
           <motion.div
             className="mb-10 sm:mb-12 md:mb-16"
@@ -38,14 +38,15 @@ export function FAQInteractive({ faqs, lang }: { faqs: FAQItem[]; lang: string }
               viewport={{ once: true }}
               transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
             >
-              <div className="px-4 py-2 bg-gold/10 backdrop-blur-sm rounded-full text-sm font-semibold text-gold flex items-center gap-2 border border-gold/20">
-                <HelpCircle className="w-4 h-4" />
-                <span>{copy.badge}</span>
-              </div>
+              <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-semibold rounded-full shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden flex items-center gap-2">
+                <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50" />
+                <HelpCircle className="w-4 h-4 relative z-10" />
+                <span className="relative z-10">{copy.badge}</span>
+              </span>
             </motion.div>
 
             <h2
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-5 md:mb-6 text-foreground px-2 text-center"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-5 md:mb-6 text-[hsl(222,47%,20%)] dark:text-white leading-tight tracking-tight px-2 text-center"
             >
               {copy.title}
             </h2>
