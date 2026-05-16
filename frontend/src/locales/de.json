@@ -1,0 +1,372 @@
+{
+  "navbar": {
+    "services": "Dienstleistungen",
+    "howItWorks": "Ablauf",
+    "pricing": "Preise",
+    "testimonials": "Referenzen",
+    "faq": "Häufig gestellte Fragen",
+    "bookCall": "Strategiegespräch buchen"
+  },
+  "blogList": {
+    "badge": "Performance‑Insights",
+    "headingPrefix": "Blog &",
+    "headingEmphasis": "Ad‑Playbooks",
+    "subtitle": "Plattformübergreifende Anzeigenstrategien, Kreativ‑Frameworks, Tracking‑Setups und Reporting für mehr ROAS auf Google, Meta, TikTok, Snapchat, LinkedIn und X.",
+    "by": "Von",
+    "read": "Lesen",
+    "items": [
+      {
+        "id": 1,
+        "title": "Der ultimative Leitfaden für TikTok‑Anzeigen: So erreichen Sie die Gen Z‑Zielgruppe 2025",
+        "excerpt": "Warum TikTok bei Gen Z gewinnt und wie Sie authentische, performante Ads bauen.",
+        "content": "<h2>Warum TikTok 2025</h2><p>TikTok dominiert die tägliche Aufmerksamkeit von Gen Z und jungen Millennials. Der For‑You‑Feed bevorzugt Authentizität, Entertainment und schnelle Iteration.</p><h2>Kreativ‑Prinzipien</h2><ul><li><strong>Creator‑Ton:</strong> dialogisch, verspielt, trendbewusst</li><li><strong>Hook in 0–2s:</strong> starke Behauptung, Pattern‑Interrupt oder Frage</li><li><strong>Payoff in 6–8s:</strong> Demo, Reveal, Transformation</li><li><strong>Native Umsetzung:</strong> Untertitel, Jump Cuts, On‑Screen‑Text</li></ul><h2>Formate & Setup</h2><ul><li>In‑Feed + Spark Ads für Social Proof</li><li>Ziele: Awareness, Traffic, Conversions (auf KPI optimieren)</li><li>Placements: zunächst nur TikTok</li></ul><h2>Budget & Skalierung</h2><ul><li>Tests mit 20–50€/Tag pro Ad Group</li><li>+20–30% alle 2–3 Tage bei stabilem CPA</li><li>Wöchentlicher Creative‑Refresh gegen Fatigue</li></ul><h2>Wichtige Metriken</h2><ul><li>Thumbstop‑Rate (2–3s), CTR, Hold‑Rate (3s/6s), CPA/ROAS</li></ul><h2>Wichtigste Erkenntnisse</h2><ul><li>Native, trendbewusste Creatives schlagen polierte Ads</li><li>Hooks wöchentlich iterieren; Hold‑Rate & CTR tracken</li><li>Budgets schrittweise skalieren, um Resets zu vermeiden</li></ul><h2>Aktions‑Checkliste</h2><ul><li>KPI & Lernbudget definieren</li><li>5 Hooks × 3 Edits planen</li><li>Beste Organics mit Spark Ads pushen</li><li>Creatives alle 7–10 Tage rotieren</li></ul><h3>Fazit</h3><p>Denken wie Creator: erst unterhalten, dann verkaufen. Iteration ist der wahre Skalierungshebel.</p>",
+        "author": "Paid Social Team",
+        "date": "5. Januar 2025",
+        "readTime": "7 Min.",
+        "category": "TikTok",
+        "image": "https://images.unsplash.com/photo-1607453995683-c7e6a3cfb462?w=1200&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": 2,
+        "title": "Snapchat vs. TikTok‑Anzeigen: Welche Plattform liefert den besseren ROI?",
+        "excerpt": "Zielgruppen, Kosten und Use‑Cases—so treffen Sie die Wahl.",
+        "content": "<h2>Zielgruppe & Nutzung</h2><ul><li><strong>Snapchat:</strong> 13–34, Messaging‑first, starke lokale Entdeckung</li><li><strong>TikTok:</strong> Gen Z‑lastig, Lean‑Back‑Content, Trend‑Kultur und Viralität</li></ul><h2>Kosten & Creatives</h2><ul><li>CPM: Snapchat oft niedriger; TikTok höher, dafür skalierbare Reichweite</li><li>Creatives: TikTok bevorzugt UGC/Trends; Snapchat schnelle, klare Verticals</li></ul><h2>Beste Einsatzfelder</h2><ul><li>Snapchat: lokale Aktionen, Events, Fashion/Beauty, schnelle CTAs</li><li>TikTok: E‑Commerce, Entertainment, kulturelle Launches</li></ul><h2>Testplan</h2><ol><li>Budget 2 Wochen gleich aufteilen</li><li>Gleiche Ziele/Pixels auf beiden Plattformen</li><li>Gewinner nach CPA/ROAS bestimmen; Zweitplatzierte für Retargeting nutzen</li></ol><h2>Fallstricke</h2><ul><li>Unterschiedliche Objectives verfälschen Ergebnisse</li><li>Unterfinanzierung verhindert stabiles Lernen</li></ul><h2>FAQ</h2><p><strong>F:</strong> Kann ich dieselben Videos nutzen?<br/><strong>A:</strong> Ja, aber plattformspezifisch editieren (Tempo, Captions, CTAs).</p><h2>Wichtigste Erkenntnisse</h2><ul><li>Beide Plattformen gespiegelt testen</li><li>Nach CPA/ROAS & Learnings entscheiden</li><li>Zweitplatzierte für Retargeting behalten</li></ul><h2>Aktions‑Checkliste</h2><ul><li>KPI + Stichprobengröße festlegen</li><li>Struktur spiegeln</li><li>14 Tage ohne Änderungen laufen lassen</li><li>Budget 60/40 zum Gewinner shiften</li></ul><h3>Fazit</h3><p>Daten entscheiden lassen. Beide im Mix behalten; Budget Richtung höchstem ROAS verschieben.</p>",
+        "author": "Strategy Team",
+        "date": "8. Januar 2025",
+        "readTime": "6 Min.",
+        "category": "Vergleich",
+        "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": 3,
+        "title": "10 kreative TikTok‑Anzeigenformate, die wirklich konvertieren",
+        "excerpt": "Von Spark Ads bis Dynamic Showcase—Formate passend zum Ziel.",
+        "content": "<h2>Überblick</h2><p>TikTok bietet Formate für Awareness, Engagement und Conversion. Wählen Sie nach Funnel‑Stufe und KPI.</p><h2>Top‑Performer</h2><ol><li><strong>In‑Feed:</strong> DR‑Arbeitstier, native Anmutung</li><li><strong>Spark Ads:</strong> Organische Gewinner (eigene/Creators) boosten</li><li><strong>Collection/Dynamic Showcase:</strong> Produkterkundung in der Breite</li></ol><h2>Premium‑Awareness</h2><ul><li>TopView & Brand Takeover: Reichweite sofort, Premium‑Kosten</li><li>Branded Hashtag & Effects: UGC‑Flywheel, AR‑Spaß</li></ul><h2>Setup‑Tipps</h2><ul><li>Produkt‑Tags und klare CTAs</li><li>Kurz (9–16s), fokussierte Schnitte mit Untertiteln</li><li>3–5 Varianten pro Audience testen</li></ul><h2>Beispiele</h2><ul><li>Lead Gen: Spark Ads mit Creator‑Review + Lead‑Form</li><li>E‑Com: Dynamic Showcase mit Katalog + UGC‑Overlay</li></ul><h2>Fallstricke</h2><ul><li>Zu polierte TV‑Edits mindern Authentizität</li><li>Captions/On‑Screen‑Text ignorieren</li></ul><h2>Messung</h2><ul><li>View‑through + Klicks, ATC/CPA, ROAS</li></ul><h2>Wichtigste Erkenntnisse</h2><ul><li>Formate nach Funnel‑Stufe wählen</li><li>Spark Ads liefern Social Proof</li><li>Katalog‑Formate skalieren Discovery</li></ul><h2>Aktions‑Checkliste</h2><ul><li>KPI & Stufe festlegen</li><li>2–3 Formate shortlist</li><li>3–5 Creative‑Varianten testen</li><li>ATC/CPA/ROAS tracken</li></ul><h3>Fazit</h3><p>Format am Ziel ausrichten. Was konvertiert skalieren, Awareness für Top‑of‑Funnel pflegen.</p>",
+        "author": "Creative Lab",
+        "date": "12. Januar 2025",
+        "readTime": "8 Min.",
+        "category": "TikTok",
+        "image": "https://images.unsplash.com/photo-1524253482453-3fed8d2fe12b?w=1200&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": 4,
+        "title": "Snapchat‑Werbung meistern: Vollständiger Leitfaden für Agenturen",
+        "excerpt": "Setup, Targeting, AR und Bidding—so positionieren Sie Snapchat als Premium‑Kanal.",
+        "content": "<h2>Kampagnen‑Architektur</h2><ul><li>Objectives: Awareness, Traffic, Conversions—je 1 Ziel pro Kampagne</li><li>Formate: Single Image/Video, Story, Dynamic, Commercials (6s non‑skippable)</li></ul><h2>Targeting</h2><ul><li>Demografie, Interessen, Verhalten, Custom Audiences</li><li>Geo: Radius‑Targeting + Snap Map für lokale Hebel</li></ul><h2>Tracking & Optimierung</h2><ul><li>Snap Pixel installieren, Events mappen, verifizieren</li><li>Zielbasiertes Bidding, Frequenz‑Caps, Creative‑Rotation</li></ul><h2>Creative Best Practices</h2><ul><li>3–5s vertikal mit starken Text‑Overlays</li><li>Hoher Kontrast, schnelle CTA‑Einblendung</li></ul><h2>Agency Playbook</h2><ol><li>Discovery + KPI‑Abgleich</li><li>Strukturaufbau & Pixel‑QA</li><li>Wöchentliche Creative‑Iterationen</li><li>Monatliche Lift‑Tests & Budget‑Shifts</li></ol><h2>Reporting</h2><ul><li>Swipe‑Up‑Rate, Bildschirmzeit, Attachment‑Rate, CPA/ROAS</li></ul><h2>Wichtigste Erkenntnisse</h2><ul><li>Kurze, kontrastreiche Creatives performen</li><li>Geo + Snap Map heben lokal</li><li>Goal‑Bidding koppelt Ausspielung an Outcomes</li></ul><h2>Aktions‑Checkliste</h2><ul><li>Pixel installieren/verifizieren</li><li>Ziel definieren + Frequenz capen</li><li>Creatives wöchentlich rotieren</li><li>Monatliche Lift‑Tests einplanen</li></ul><h3>Fazit</h3><p>Snapchat als Premium‑Aufmerksamkeitskanal für kaufkräftige junge Zielgruppen positionieren.</p>",
+        "author": "Agency Ops",
+        "date": "15. Januar 2025",
+        "readTime": "7 Min.",
+        "category": "Snapchat",
+        "image": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=1200&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": 5,
+        "title": "So erstellen Sie virale TikTok‑Anzeigen mit jedem Budget",
+        "excerpt": "Kulturelle Relevanz > Budget—Hooks, Trends und UGC.",
+        "content": "<h2>Research & Insights</h2><ul><li>FYP täglich 15–30 Min. scannen: Hooks, Strukturen, Edits erkennen</li><li>Trends, Sounds, Angles, Editing‑Stile dokumentieren</li></ul><h2>Kreativ‑System</h2><ol><li><strong>Hook:</strong> Claim, Reveal oder Konflikt in 0–2s</li><li><strong>Demo:</strong> Produkt löst Problem sichtbar</li><li><strong>Social Proof:</strong> UGC‑Zitate, Overlays, Ratings</li><li><strong>CTA:</strong> spezifisch und zeitgebunden (z. B. „Heute −20%“)</li></ol><h2>Amplifizierung</h2><ul><li>Nano‑Influencer (1k–10k) für Authentizität</li><li>Spark Ads für organische Winner</li></ul><h2>Testing & Budget</h2><ul><li>3–6 Varianten mit 50–100€ Gesamt zum Identifizieren von Gewinnern</li><li>Kill/Scale‑Regeln nach CTR, Hold‑Rate, CPA</li></ul><h2>Fallstricke</h2><ul><li>Generische CTAs wie „Mehr erfahren“</li><li>Überpolierte Edits, die wie Ads wirken</li></ul><h2>FAQ</h2><p><strong>F:</strong> Brauche ich Musikrechte?<br/><strong>A:</strong> Nutzen Sie TikToks Commercial Music Library oder Creator‑Audio.</p><h2>Wichtigste Erkenntnisse</h2><ul><li>Hooks entscheiden in den ersten 2 Sekunden</li><li>Gewinnende Organics mit Spark pushen</li><li>Budget‑Disziplin schlägt Zufall</li></ul><h2>Aktions‑Checkliste</h2><ul><li>Täglich Trends recherchieren</li><li>5 Hooks pro Angle skripten</li><li>3 Edits pro Skript schneiden</li><li>Winners via Spark promoten</li></ul><h3>Fazit</h3><p>Viralität folgt kultureller Passung, nicht Budgetgröße. Schnell an Hooks/Angles iterieren.</p>",
+        "author": "Creative Lab",
+        "date": "18. Januar 2025",
+        "readTime": "6 Min.",
+        "category": "TikTok",
+        "image": "https://images.unsplash.com/photo-1552664688-cf412ec27db2?w=1200&auto=format&fit=crop&q=80"
+      },
+      {
+        "id": 6,
+        "title": "Die Macht der Snapchat‑Linsen: Markenengagement durch AR‑Ads",
+        "excerpt": "Warum AR‑Linsen 20–30s Interaktion erzielen und wie man sie gestaltet.",
+        "content": "<h2>Warum AR wirkt</h2><p>AR verwandelt passiven Konsum in aktives Spiel. Branded Lenses schaffen Erinnerungswerte und Shares.</p><h2>Linsen‑Typen</h2><ul><li><strong>Face Lenses:</strong> Overlays, Make‑up, Transformationen</li><li><strong>World Lenses:</strong> 3D‑Objekte in der Umgebung</li></ul><h2>Design‑Checkliste</h2><ul><li>Sofortige Freude in 1s; intuitive Gesten</li><li>Klare Brand‑Elemente ohne Gesicht zu verdecken</li><li>Sharing anregen: Prompts, Challenges, Rewards</li></ul><h2>Aktivierungs‑Ideen</h2><ul><li>Produktlaunch‑Linse + UGC‑Contest</li><li>Event‑Linse mit Geo‑Radius + Snap Map</li></ul><h2>KPIs & Kosten</h2><ul><li>Spielzeit, Shares, Screenshots, Lens‑to‑Site‑CTR</li><li>Nationale Buchungen sind Premium; lokal gut zugänglich</li></ul><h2>Checkliste</h2><ul><li>Ziel & Zielgruppe definieren</li><li>Interaktionen storyboarden</li><li>QA auf Geräten/Lichtsituationen</li></ul><h2>Wichtigste Erkenntnisse</h2><ul><li>Spaß + Einfachheit treiben Shares</li><li>AR glänzt bei Launches & Events</li><li>Spielzeit & Shares sind Kern‑KPIs</li></ul><h2>Aktions‑Checkliste</h2><ul><li>Linsen‑Konzept + KPI festlegen</li><li>Auf sofortige Freude designen</li><li>Geo‑Targeting + Snap Map planen</li><li>UGC‑Sharing‑Prompt einbauen</li></ul><h3>Fazit</h3><p>Mit AR partizipative Markenerlebnisse schaffen, die Word‑of‑Mouth auslösen.</p>",
+        "author": "AR Studio",
+        "date": "22. Januar 2025",
+        "readTime": "5 Min.",
+        "category": "Snapchat",
+        "image": "https://images.unsplash.com/photo-1511512578047-dfb367046420?w=1200&auto=format&fit=crop&q=80"
+      }
+    ]
+  },
+  "integrations": {
+    "badge": "Plattform‑Integrationen",
+    "headingPrefix": "Nahtlose",
+    "headingEmphasis": "Ad‑ & Analytics‑Integrationen",
+    "subtitle": "Wir verbinden Plattformen End‑to‑End – Ads, Pixel, GA4/GTM und Dashboards – damit Budgets in messbaren Umsatz fließen.",
+    "items": [
+      { "name": "Google Ads", "category": "Anzeigen" },
+      { "name": "Meta Ads", "category": "Anzeigen" },
+      { "name": "TikTok Ads", "category": "Anzeigen" },
+      { "name": "Snapchat Ads", "category": "Anzeigen" },
+      { "name": "LinkedIn Ads", "category": "Anzeigen" },
+      { "name": "X Ads (Twitter)", "category": "Anzeigen" },
+      { "name": "GA4", "category": "Analytik" },
+      { "name": "Google Tag Manager", "category": "Analytik" },
+      { "name": "Looker Studio", "category": "Analytik" },
+      { "name": "Supermetrics", "category": "Analytik" },
+      { "name": "Segment", "category": "CDP" },
+      { "name": "Mixpanel", "category": "Produkt" },
+      { "name": "Hotjar", "category": "UX" },
+      { "name": "Meta Pixel", "category": "Tracking" },
+      { "name": "LinkedIn Insight Tag", "category": "Tracking" },
+      { "name": "TikTok Pixel", "category": "Tracking" },
+      { "name": "Server‑Side GTM", "category": "Tracking" },
+      { "name": "Shopify/GA", "category": "E‑Com" }
+    ],
+    "ctaTitlePrefix": "Nutzen Sie ein anderes System?",
+    "ctaTitleEmphasis": "Wir passen uns an.",
+    "ctaDesc": "Teilen Sie Ihr Format oder Ihre API – CSV, Sheets, CRM oder DB. Wir richten uns End‑to‑End nach Ihrem Workflow."
+  },
+  "hero": {
+    "badge": "Vertrauen von 300+ Growth‑Teams weltweit",
+    "headingPrefix": "Profitables",
+    "headingEmphasis": "Ad‑Management",
+    "subtitle": "Planen, launchen und skalieren Sie Anzeigen über Google, Meta, TikTok, Snapchat, LinkedIn und X. Full‑Funnel‑Strategie, Creatives, Tracking und wöchentliche Performance‑Optimierung.",
+    "ctaAria": "Kostenloses 30‑minütiges Strategiegespräch buchen",
+    "ctaPrimaryDesktop": "Strategiegespräch buchen (30 Min)",
+    "ctaPrimaryMobile": "Gespräch buchen",
+    "urgency": "Kostenloses Design‑Mockup + Strategiesession inklusive",
+    "topRated": "Top bewertet",
+    "imgAlt": "Kreativer Grafik‑Workspace mit lebendigen Projekten",
+    "statProjects": "Umgesetzte Projekte",
+    "statTurnaround": "Ø Durchlaufzeit (Tage)",
+    "statSatisfaction": "Kundenzufriedenheit"
+  },
+  "notFound": {
+    "code": "404",
+    "subtitle": "Ups! Seite nicht gefunden",
+    "home": "Zur Startseite"
+  },
+  "how": {
+    "badge": "Unser Prozess (4 Schritte)",
+    "headingPrefix": "So",
+    "headingEmphasis": "arbeiten wir",
+    "subtitle": "Von Audit bis Optimierung in 7–14 Tagen. Datengetriebener Prozess, messbare Ergebnisse und kontinuierliche Verbesserung.",
+    "cta": "Strategiegespräch buchen",
+    "steps": [
+      {
+        "step": "Schritt 1",
+        "title": "Audit & Strategie",
+        "description": "Bestehende Kampagnen analysieren, Chancen identifizieren und KPIs definieren. Kanalstrategie, Budget und Tracking-Anforderungen planen."
+      },
+      {
+        "step": "Schritt 2",
+        "title": "Setup & Implementierung",
+        "description": "Kampagnenstrukturen aufbauen, Pixel und GA4-Events implementieren, GTM konfigurieren. Frameworks für Kreativtests und Dashboards einrichten."
+      },
+      {
+        "step": "Schritt 3",
+        "title": "Launch & Test",
+        "description": "Kampagnen ausrollen, Kreativ-Varianten starten und Performance überwachen. Schnelles Testing zur Identifikation von Gewinnern."
+      },
+      {
+        "step": "Schritt 4",
+        "title": "Optimieren & Skalieren",
+        "description": "Wöchentliche Optimierung auf Basis der Daten, Gewinner skalieren, Budgets anpassen. Kontinuierliche Kreativtests und Reporting."
+      }
+    ]
+  },
+  "services": {
+    "badge": "Anzeigen-Services",
+    "headingPrefix": "Full-Funnel",
+    "headingEmphasis": "Ad Management",
+    "intro": "Google, Meta, TikTok, Snapchat, LinkedIn und X — geplant, gelauncht und optimiert mit Kreativtests, solidem Tracking und klaren Reports.",
+    "items": [
+      {
+        "title": "Ad-Strategie & Planung",
+        "description": "Full‑Funnel-Strategie, Zielgruppen-Research, Budgets und Kanal-Mix, um Ihre CAC- und ROAS-Ziele zu erreichen",
+        "benefit": "Klarer Wachstumsplan"
+      },
+      {
+        "title": "Google Ads (Search/PMAX/YouTube)",
+        "description": "Such-, Performance-Max- und YouTube-Kampagnen aufbauen und optimieren mit robustem Keyword- und Kreativtesting",
+        "benefit": "Intent einfangen"
+      },
+      {
+        "title": "Meta- & TikTok-Ads",
+        "description": "Leistungsstarke Creatives und Setups für Facebook, Instagram und TikTok mit laufenden A/B-Tests",
+        "benefit": "Creatives skalieren"
+      },
+      {
+        "title": "LinkedIn- & X-(Twitter)-Ads",
+        "description": "B2B-Targeting auf LinkedIn plus trendbewusste X-Kampagnen für Awareness, Traffic und Nachfrage",
+        "benefit": "Entscheider erreichen"
+      },
+      {
+        "title": "Snapchat & neue Plattformen",
+        "description": "Reichweite über Snapchat und weitere Paid-Social-Plattformen ausbauen, End-to-End getrackt",
+        "benefit": "Reichweite erschließen"
+      },
+      {
+        "title": "Tracking, Analytics & CRO",
+        "description": "GTM/GA4, Pixel, serverseitiges Tracking, Dashboards und Landingpage-Optimierung für echte Performance",
+        "benefit": "Messen & verbessern"
+      }
+    ]
+  },
+  "value": {
+    "heading": "Warum 200+ Marken unser SMM-Team wählen",
+    "items": [
+      { "title": "70% Kostenreduktion", "description": "In den meisten Fällen garantiert" },
+      { "title": "Native deutsche Qualitätskontrolle", "description": "Direkte Aufsicht durch Muttersprachler" },
+      { "title": "24h Austausch-Garantie", "description": "Nahtlose Kontinuität sichergestellt" },
+      { "title": "Volle Vertraulichkeit & NDAs", "description": "Ihre Daten bleiben sicher" }
+    ]
+  },
+  "pricing": {
+    "badge": "Transparente Preise",
+    "headingPrefix": "Ad-Kampagnen",
+    "headingEmphasis": "Pakete",
+    "intro": "Wählen Sie einen Plan, der zu Ihren Kanälen und Zielen passt. Budgets werden nur skaliert, wenn die Unit Economics stimmen. Keine versteckten Gebühren.",
+    "trialTitle": "Eine Woche kostenlos testen",
+    "freeBanner": "Neukunden erhalten 7 Tage kostenlos für jeden Plan. Keine Kreditkarte erforderlich.",
+    "startTrial": "Kostenlos testen",
+    "tagLabel": "Ad-Kampagnen",
+    "perMonth": "/Monat",
+    "noSetupFee": "Keine Einrichtungsgebühr",
+    "setupFeeWithAmount": "+ {{amount}} Einrichtungsgebühr",
+    "startAudit": "Kostenfreien Audit starten",
+    "disclaimer": "Alle Pläne werden monatlich abgerechnet, ohne langfristige Bindung. Upgrade/Downgrade jederzeit. Typische Bearbeitungszeit 24–72h je nach Volumen.",
+    "plans": [
+      {
+        "name": "Launch",
+        "hours": "Ein Kanal (Google oder Meta)",
+        "price": 1499,
+        "setupFee": 0,
+        "features": [
+          "Account-Audit & Strategie (1x)",
+          "Kampagnen-Setup (Search/PMAX oder Meta)",
+          "Pixel-/GA4-Event-Mapping",
+          "2 Creatives oder Varianten inklusive",
+          "Wöchentliche Optimierung & Report"
+        ],
+        "highlighted": false
+      },
+      {
+        "name": "Scale",
+        "hours": "Multi-Channel (2–3 Plattformen)",
+        "price": 3499,
+        "setupFee": 0,
+        "badge": "Am beliebtesten",
+        "features": [
+          "Alles aus Launch",
+          "PMAX + Paid Social Struktur",
+          "Framework für Kreativtests",
+          "Serverseitiges GTM (optional)",
+          "Wöchentlicher Call + Looker-Dashboard",
+          "Priorisierter Support"
+        ],
+        "highlighted": true
+      },
+      {
+        "name": "Enterprise",
+        "hours": "Full‑Funnel (4+ Plattformen)",
+        "price": 4999,
+        "setupFee": 0,
+        "badge": "Bestes Preis‑Leistungs‑Verhältnis",
+        "features": [
+          "Alles aus Scale",
+          "ABM + LinkedIn + X (B2B)",
+          "Lift-Studien & Holdout-Tests",
+          "Landingpage‑CRO‑Support",
+          "Dedizierter Stratege",
+          "Individuelle SLAs & Integrationen"
+        ],
+        "highlighted": false
+      }
+    ]
+  },
+  "why": {
+    "badge": "Der DON VA Unterschied",
+    "heading": "Warum DON VA?",
+    "subtitle": "Nicht alle Virtual‑Assistant‑Services sind gleich. Das unterscheidet uns vom Rest.",
+    "items": [
+      {
+        "title": "Exklusiver Talentpool",
+        "description": "Nur 3% der Bewerber bestehen unseren strengen Auswahlprozess. Jede VA wird auf Skills, Kommunikation und Cultural Fit getestet."
+      },
+      {
+        "title": "Native deutsche Aufsicht",
+        "description": "Jede Lieferung wird von deutschsprachigen Managern geprüft, die Markt, Kultur und Qualitätsstandards verstehen. Keine Sprach- oder Kulturbarrieren."
+      },
+      {
+        "title": "Blitzschnelle Skalierung",
+        "description": "Von 1 auf 10 VAs in Tagen statt Monaten. Durch unseren vorgeprüften Pool warten Sie nie auf die richtige Person."
+      },
+      {
+        "title": "Null‑Risiko‑Garantie",
+        "description": "14‑Tage Geld‑zurück‑Garantie in allen Starter‑Plänen. Falls eine VA nicht passt, ersetzen wir innerhalb von 24h – ohne Fragen, ohne Extra‑Kosten."
+      },
+      {
+        "title": "Echte Partnerschaft",
+        "description": "Wir verschwinden nicht nach dem Staffing. Dediziertes Account‑Management, regelmäßige Check‑ins und laufende Optimierung für maximalen ROI."
+      },
+      {
+        "title": "Bewährte Ergebnisse",
+        "description": "Über 200 Unternehmen haben mit DON VA skaliert. Ø Kundenzufriedenheit: 4,9/5. Ø Kosteneinsparung: 68%. Keine Versprechen – belegte Resultate."
+      }
+    ]
+  },
+  "faq": {
+    "badge": "Ad-Kampagnen FAQs",
+    "heading": "Häufig gestellte Fragen",
+    "description": "Alles, was Sie über unser Ad-Management wissen müssen – Plattformen, Tracking, Creatives, Reporting und Timelines.",
+    "contactSupport": "Support kontaktieren",
+    "viewPricing": "Preise ansehen",
+    "ctaTitle": "Noch Fragen?",
+    "ctaSubtitle": "Unser Team hilft gerne. Wir melden uns innerhalb von 2 Stunden.",
+    "items": []
+  }
+  ,
+  "blog": {
+    "notFound": "Blogbeitrag nicht gefunden",
+    "backHome": "Zur Startseite",
+    "backToHome": "Zur Startseite",
+    "ctaTitle": "Bereit, Ihr Unternehmen zu transformieren?",
+    "ctaSubtitle": "Buchen Sie eine kostenlose Beratung und erfahren Sie, wie virtuelle Assistenten beim Skalieren helfen.",
+    "ctaPrimary": "Kostenlose Beratung buchen →",
+    "ctaPrimaryMobile": "Jetzt starten →",
+    "moreArticles": "Weitere Artikel"
+  },
+  "caseStudy": {
+    "notFound": "Fallstudie nicht gefunden",
+    "backHome": "Zur Startseite",
+    "annualSavings": "Jährliche Einsparungen",
+    "teamSize": "Teamgröße",
+    "implementation": "Umsetzung",
+    "challenge": "Die Herausforderung",
+    "solution": "Die Lösung",
+    "results": "Die Ergebnisse",
+    "successBadge": "Erfolg voraus",
+    "readyTitlePrefix": "Bereit für",
+    "readyTitleEmphasis": "ähnliche Ergebnisse?",
+    "ctaBook": "Kostenlose Beratung buchen",
+    "ctaViewAll": "Alle Fallstudien ansehen",
+    "benefitNoCommitment": "Ohne Verpflichtung",
+    "benefit15Min": "15 Minuten",
+    "benefitFree": "100% kostenlos",
+    "moreSuccess": "Weitere Erfolgsgeschichten",
+    "viewFullCase": "Komplette Fallstudie ansehen",
+    "viewCaseStudy": "Fallstudie ansehen"
+  },
+  "testimonials": {
+    "headingPrefix": "Echte Ergebnisse von",
+    "headingEmphasis": "Growth-Teams",
+    "subtitle": "Echte Resultate – niedrigere CPA, höherer ROAS und schnellere Lernzyklen über Google, Meta, TikTok, Snapchat, LinkedIn und X.",
+    "successStory": "Erfolgsgeschichte",
+    "caseStudyPrefix": "Fallstudie:",
+    "caseStudyTitle": "3,4x ROAS über mehrere Kanäle",
+    "caseStudyDesc": "Wie wir PMAX + Meta-Kreativtests kombinierten, um Budgets zu skalieren und gleichzeitig den CPA zu verbessern – validiert in GA4.",
+    "viewFull": "Komplette Fallstudie ansehen",
+    "items": []
+  }
+  ,
+  "caseStudiesList": {
+    "badge": "Erfolgsgeschichten",
+    "heading": "Erfolgsgeschichten aus Ad‑Kampagnen",
+    "subtitle": "So haben wir profitabel über Google, Meta, TikTok, Snapchat, LinkedIn und X skaliert – mit Kreativtests, solidem Tracking und wöchentlicher Optimierung.",
+    "statResult": "Ergebnis",
+    "statFocus": "Fokus",
+    "statTimeframe": "Zeitrahmen",
+    "readShort": "Studie ansehen",
+    "ctaPrompt": "Bereit für Ihre eigene Erfolgsgeschichte?",
+    "ctaPrimaryDesktop": "Kostenlose Erstberatung buchen →",
+    "ctaPrimaryMobile": "Jetzt starten →",
+    "items": []
+  }
+}

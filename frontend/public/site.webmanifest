@@ -1,0 +1,67 @@
+{
+  "name": "Don-Ad - Omnichannel Ad Campaign Management",
+  "short_name": "Don-Ad",
+  "description": "Plan, launch, and scale paid ads across Google, Meta, TikTok, Snapchat, LinkedIn, and X. Full‑funnel strategy, creative, tracking, A/B testing, and performance reporting.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "marketing"],
+  "icons": [
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/og-image.jpg",
+      "sizes": "1280x720",
+      "type": "image/jpeg",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book Meeting",
+      "short_name": "Book",
+      "description": "Schedule a consultation with Don-Ad",
+      "url": "/book-meeting",
+      "icons": [{ "src": "/favicon-16x16.png", "sizes": "16x16" }]
+    },
+    {
+      "name": "View Pricing",
+      "short_name": "Pricing",
+      "description": "View Don-Ad pricing plans",
+      "url": "/pricing",
+      "icons": [{ "src": "/favicon-16x16.png", "sizes": "16x16" }]
+    }
+  ]
+}
