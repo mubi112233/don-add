@@ -9,19 +9,9 @@
 const getApiBase = () =>
   process.env.NEXT_PUBLIC_API_BASE || "https://api.don-va.com";
 
-<<<<<<< HEAD
 const getTenantId = () =>
   process.env.NEXT_PUBLIC_TENANT_ID ||
   'don_seo';
-=======
-const getTenantId = () => {
-  const tenantId = process.env.NEXT_PUBLIC_TENANT_ID || 'recrtment';
-  if (typeof window !== 'undefined') {
-    console.log('[API] Using Tenant ID:', tenantId);
-  }
-  return tenantId;
-};
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
 
 /**
  * Creates fetch options with proper headers including X-Tenant-ID

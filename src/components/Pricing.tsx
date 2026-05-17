@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { getCopy } from "@/lib/copy";
 import { siteConfig, localizedPath } from "@/lib/site-config";
+import { SPACING } from "@/lib/constants";
 
 // Constants
 const MAX_VA_COUNT = 10;
@@ -32,11 +33,7 @@ const plans: PricingPlan[] = [
     price: 369,
     setupFee: 149,
     features: [
-<<<<<<< HEAD
       "Dedicated Ads Specialist",
-=======
-      "Dedicated Virtual Assistant",
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
       "Native Quality Control", 
       "24h Replacement Guarantee",
       "Slack/Email Support",
@@ -107,11 +104,7 @@ export const Pricing = () => {
   return (
     <motion.section 
       id="pricing"
-<<<<<<< HEAD
       className={`relative ${SPACING.section} bg-background text-foreground z-10 overflow-hidden`}
-=======
-      className="relative py-4 sm:py-6 md:py-8 lg:py-10 text-foreground z-10 overflow-hidden bg-muted/30"
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
       initial={{ opacity: 0, y: 200 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -226,7 +219,6 @@ export const Pricing = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <motion.span 
-<<<<<<< HEAD
             className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden"
             whileHover={{ scale: 1.05 }}
           >
@@ -235,15 +227,6 @@ export const Pricing = () => {
           </motion.span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-[hsl(222,47%,20%)] dark:text-white leading-tight tracking-tight">
             {copy.sectionTitle}
-=======
-            className="inline-block px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-primary-foreground text-xs sm:text-sm font-bold rounded-full mb-2 sm:mb-3 md:mb-4 shadow-lg"
-            whileHover={{ scale: 1.05 }}
-          >
-            {copy.sectionBadge || "Transparent Pricing for Virtual Assistants"}
-          </motion.span>
-          <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-2 sm:mb-3 md:mb-4 text-foreground leading-tight">
-            Simple, transparent pricing for recruiting and managing Virtual Assistants
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
           </h2>
           <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-2xl leading-relaxed">
             Choose a plan that fits your recruitment needs. Scale up or down anytime.
@@ -392,13 +375,8 @@ export const Pricing = () => {
               
               <div className={`relative rounded-2xl p-6 sm:p-8 md:p-10 transition-all duration-500 group h-full ${
                 plan.highlighted 
-<<<<<<< HEAD
                   ? 'bg-gradient-to-br from-primary/95 via-primary/98 to-primary text-foreground shadow-[0_25px_70px_-15px_hsl(220_100%_50%/0.5)]' 
                   : 'bg-card border-2 border-gold/20 hover:border-gold hover:shadow-[0_25px_70px_-15px_hsl(45_80%_55%/0.4)]'
-=======
-                  ? 'bg-gradient-to-br from-primary via-primary/90 to-primary text-primary-foreground shadow-lg' 
-                  : 'bg-background border-2 border-border hover:border-primary/50 hover:shadow-lg'
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
               }`}>
                 {/* Top accent line with animation */}
                 <motion.div 

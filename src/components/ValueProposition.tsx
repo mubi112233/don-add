@@ -33,11 +33,7 @@ export const ValueProposition = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <h2 
-<<<<<<< HEAD
             className="text-4xl md:text-5xl font-bold mb-4 text-[hsl(222,47%,20%)] dark:text-white leading-tight tracking-tight"
-=======
-            className="text-4xl md:text-5xl font-bold mb-4 text-white"
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
             dangerouslySetInnerHTML={{ __html: t("valueProposition.heading") }}
           />
         </motion.div>

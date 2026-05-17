@@ -64,7 +64,6 @@ const websiteJsonLd = {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   verification: {
-<<<<<<< HEAD
     google: "0OlTu41Tz0RTHRVt4WDBqer5e4sECs-KHKVyi6GZxmY",
   },
   title: {
@@ -87,31 +86,6 @@ export const metadata: Metadata = {
   authors: [{ name: "DON ADS", url: SITE_URL }],
   creator: "DON ADS",
   publisher: "DON ADS",
-=======
-    google: "vX_t407Cag7AMUBJknopyYEdRElcHuZL_cjKFrBHXH8",
-  },
-  title: {
-    default: "DON Recruitment - Professional Talent Acquisition | Hire Top Talent",
-    template: "%s | DON Recruitment",
-  },
-  description:
-    "Professional recruitment services connecting businesses with top talent. Specialized in executive search, permanent placement, and talent acquisition across industries.",
-  keywords: [
-    "recruitment services",
-    "talent acquisition",
-    "executive search",
-    "staffing solutions",
-    "hiring agency",
-    "DON Recruitment",
-    "Recruiting Agentur",
-    "Personalvermittlung",
-    "top talent hiring",
-    "professional placement",
-  ],
-  authors: [{ name: "DON Recruitment", url: SITE_URL }],
-  creator: "DON Recruitment",
-  publisher: "DON Recruitment",
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
   formatDetection: {
     email: false,
     address: false,
@@ -130,7 +104,6 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-<<<<<<< HEAD
     siteName: "DON ADS",
     title: "DON ADS - Professional Ad Management | Grow Your Leads & Revenue",
     description:
@@ -145,22 +118,6 @@ export const metadata: Metadata = {
     title: "DON ADS - Professional Ad Management | Grow Your Leads & Revenue",
     description:
       "Professional ad management and call center services for businesses in the DACH region. Google Ads, Meta Ads, and performance campaigns.",
-=======
-    siteName: "DON Recruitment",
-    title: "DON Recruitment - Professional Talent Acquisition | Hire Top Talent",
-    description:
-      "Professional recruitment services connecting businesses with top talent. Specialized in executive search, permanent placement, and talent acquisition.",
-    url: absoluteUrl("/en"),
-    locale: "en_US",
-    alternateLocale: ["de_DE"],
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "DON Recruitment — Professional Talent Acquisition" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "DON Recruitment - Professional Talent Acquisition | Hire Top Talent",
-    description:
-      "Professional recruitment services connecting businesses with top talent. Specialized in executive search, permanent placement, and talent acquisition.",
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
     images: [absoluteUrl("/og-image.jpg")],
   },
   alternates: {
@@ -173,111 +130,7 @@ export const metadata: Metadata = {
   },
 };
 
-<<<<<<< HEAD
-=======
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "DON Recruitment",
-  url: SITE_URL,
-  logo: absoluteUrl("/favicon.ico"),
-  description:
-    "Professional recruitment services connecting businesses with top talent. Specialized in executive search, permanent placement, and talent acquisition.",
-  contactPoint: {
-    "@type": "ContactPoint",
-    contactType: "customer service",
-    availableLanguage: ["English", "German"],
-  },
-  areaServed: [
-    { "@type": "Country", name: "Germany" },
-    { "@type": "Country", name: "Austria" },
-    { "@type": "Country", name: "Switzerland" },
-    { "@type": "Place", name: "Worldwide" },
-  ],
-  sameAs: ["https://linkedin.com/company/don-recruitment", "https://twitter.com/don_recruitment"],
-};
 
-const websiteJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  name: "DON Recruitment",
-  url: SITE_URL,
-  inLanguage: ["en-US", "de-DE"],
-  publisher: { "@type": "Organization", name: "DON Recruitment" },
-};
-
-// Service schema for recruitment services
-const serviceJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Service",
-  serviceType: "Recruitment Services",
-  provider: {
-    "@type": "Organization",
-    name: "DON Recruitment",
-    url: SITE_URL,
-  },
-  areaServed: [
-    { "@type": "Country", name: "Germany" },
-    { "@type": "Country", name: "Austria" },
-    { "@type": "Country", name: "Switzerland" },
-  ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Recruitment Services",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Executive Search",
-          description: "High-level executive and leadership recruitment",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Permanent Placement",
-          description: "Direct hire recruitment for permanent positions",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Talent Acquisition",
-          description: "Comprehensive talent sourcing and acquisition services",
-        },
-      },
-    ],
-  },
-};
-
-// LocalBusiness schema
-const localBusinessJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  name: "DON Recruitment",
-  url: SITE_URL,
-  logo: absoluteUrl("/favicon.ico"),
-  image: absoluteUrl("/og-image.jpg"),
-  description: "Professional recruitment services connecting businesses with top talent",
-  sameAs: [
-    "https://linkedin.com/company/don-recruitment",
-    "https://twitter.com/don_recruitment",
-  ],
-  priceRange: "€€€",
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "09:00",
-      closes: "18:00",
-    },
-  ],
-};
-
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
 export default async function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
@@ -286,7 +139,6 @@ export default async function RootLayout({
 
   return (
     <html lang={htmlLang} suppressHydrationWarning className={`${inter.variable} ${poppins.variable}`}>
-<<<<<<< HEAD
       <head suppressHydrationWarning />
       <body className={`${inter.className} antialiased`} suppressHydrationWarning>
         {process.env.NODE_ENV === "development" && (
@@ -299,40 +151,6 @@ export default async function RootLayout({
         <a href="#main-content" className="skip-to-content">
           Skip to main content
         </a>
-=======
-      <head>
-        {/* Performance: Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        
-        {/* Security */}
-        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        
-        {/* Analytics */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-LNDGNQ7Z74" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-LNDGNQ7Z74');
-            `,
-          }}
-        />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-C78GJVDGR6" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-C78GJVDGR6');
-            `,
-          }}
-        />
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
@@ -341,22 +159,10 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
-<<<<<<< HEAD
-=======
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
-        />
-      </head>
-      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
-        <a href="#main-content" className="skip-to-content">
-          Skip to main content
-        </a>
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
         <DesignSystemProvider defaultTheme="blue">
           <ThemeProvider
             attribute="class"

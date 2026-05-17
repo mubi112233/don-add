@@ -19,18 +19,12 @@ export function FAQInteractive({ faqs, lang }: { faqs: FAQItem[]; lang: string }
   return (
     <section
       id="faq"
-<<<<<<< HEAD
       className="relative py-8 sm:py-10 md:py-12 lg:py-14 bg-muted/30 z-80 overflow-hidden"
     >
       <div className="absolute top-20 right-10 w-64 h-64 bg-gold/5 rounded-full blur-[100px]" />
       <div className="absolute bottom-20 left-10 w-64 h-64 bg-gold/5 rounded-full blur-[100px]" />
 
       <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 relative z-10">
-=======
-      className="relative py-4 sm:py-6 md:py-8 lg:py-10 z-40 overflow-hidden bg-muted/30"
-    >
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 relative z-10">
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
         <div className="max-w-4xl mx-auto">
           <motion.div
             className="mb-6 sm:mb-8 md:mb-10 lg:mb-12 text-center"
@@ -40,31 +34,20 @@ export function FAQInteractive({ faqs, lang }: { faqs: FAQItem[]; lang: string }
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
             <motion.span
-              className="inline-block px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-primary-foreground text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-lg"
+              className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden"
               whileHover={{ scale: 1.05 }}
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
             >
-<<<<<<< HEAD
-              <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-semibold rounded-full shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden flex items-center gap-2">
-                <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50" />
-                <HelpCircle className="w-4 h-4 relative z-10" />
-                <span className="relative z-10">{copy.badge}</span>
-              </span>
-            </motion.div>
+              <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50" />
+              <span className="relative z-10">{copy.badge}</span>
+            </motion.span>
 
             <h2
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-5 md:mb-6 text-[hsl(222,47%,20%)] dark:text-white leading-tight tracking-tight px-2 text-center"
             >
               {copy.title}
-=======
-              Got Questions?
-            </motion.span>
-
-            <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-foreground leading-tight">
-              {copy.title || "Frequently Asked Questions"}
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
               {copy.description || "Everything you need to know about our services. Can't find the answer you're looking for? Reach out to our team."}

@@ -12,7 +12,6 @@ import {
   BarChart3,
   CheckCircle2,
   Zap,
-  Globe,
 } from "lucide-react";
 import { fetchHero, HeroData } from "@/lib/api";
 import { useRouter } from "next/navigation";
@@ -80,15 +79,9 @@ export const Hero = () => {
 
   const fallbackData: HeroData = useMemo(() => isGe
     ? {
-<<<<<<< HEAD
         title: "Steigern Sie Ihre Leads mit professionellem Ad-Management",
         subtitle:
           "Professionelle Werbekampagnen und Call-Center-Services für Unternehmen in der DACH-Region. Google Ads, Meta Ads und Performance-Marketing für mehr Leads.",
-=======
-        title: "Skalieren Sie Ihr Team mit Top Virtual Assistants",
-        subtitle:
-          "Professionelle Personalvermittlung für Unternehmen in der DACH-Region. Wir finden und verwalten hochqualifizierte virtuelle Assistenten für Ihr Wachstum.",
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
         tagline: "Von 200+ wachsenden Unternehmen vertraut",
         image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=900&fit=crop&q=80",
         ctaPrimary: "Jetzt starten",
@@ -96,15 +89,9 @@ export const Hero = () => {
         stats: { clients: "200+", costSaved: "3× ROAS", rating: "4.9/5" },
       }
     : {
-<<<<<<< HEAD
         title: "Grow Your Leads with Professional Ad Management",
         subtitle:
           "Professional ad campaigns and call center services for businesses in the DACH region. Google Ads, Meta Ads, and performance marketing to grow your revenue.",
-=======
-        title: "Scale Your Team with Top Virtual Assistants",
-        subtitle:
-          "Professional staffing solutions for businesses in the DACH region. We find and manage high-quality virtual assistants for your growth.",
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
         tagline: "Trusted by 200+ Growing Businesses",
         image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&h=900&fit=crop&q=80",
         ctaPrimary: "Get Started Today",
@@ -263,7 +250,6 @@ export const Hero = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             style={{ transformStyle: "preserve-3d" }}
           >
-<<<<<<< HEAD
             <motion.div
               initial={{ opacity: 0, scale: 0.8, y: 20 }}
               animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.8, y: 20 }}
@@ -285,47 +271,8 @@ export const Hero = () => {
             </h1>
 
             <p className="text-base sm:text-lg md:text-xl lg:text-xl text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 md:mb-5 leading-relaxed max-w-xl font-normal">
-=======
-            <motion.div 
-              className="inline-flex items-center space-x-1.5 sm:space-x-2 bg-gradient-to-r from-blue-50 to-cyan-50 dark:bg-gold/10 border border-blue-200 dark:border-gold/20 text-blue-700 dark:text-gold px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 rounded-full mb-3 sm:mb-4 md:mb-6 backdrop-blur-sm shadow-sm hover:shadow-md transition-all duration-300"
-              initial={{ scale: 0, rotateZ: -180 }}
-              animate={{ scale: 1, rotateZ: 0 }}
-              transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-              whileHover={{ scale: 1.05, translateZ: 20 }}
-              style={{ transformStyle: "preserve-3d" }}
-            >
-              <Globe className="h-3 w-3 sm:h-3.5 sm:w-3.5 md:h-4 md:w-4 flex-shrink-0" />
-              <span className="text-xs sm:text-sm font-medium">{tagline}</span>
-            </motion.div>
-            
-            <motion.h1 
-              className="text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4 md:mb-6 leading-tight drop-shadow-[0_2px_24px_rgba(0,0,0,0.1)] dark:drop-shadow-[0_2px_24px_rgba(0,0,0,0.5)]"
-              style={{ transformStyle: "preserve-3d" }}
-            >
-              {title.split(' ').map((word: string, index: number) => (
-                <motion.span
-                  key={index}
-                  initial={{ opacity: 0, y: 50 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.3 + index * 0.1, duration: 0.8 }}
-                  className="inline-block"
-                  style={{ transform: "translateZ(30px)" }}
-                >
-                  {word}{' '}
-                </motion.span>
-              ))}
-            </motion.h1>
-            
-            <motion.p 
-              className="text-sm sm:text-base md:text-lg lg:text-xl text-slate-600 dark:text-slate-200 mb-4 sm:mb-6 md:mb-8 leading-relaxed max-w-2xl"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.7, duration: 0.8 }}
-              style={{ transform: "translateZ(20px)", transformStyle: "preserve-3d" }}
-            >
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
               {subtitle}
-            </motion.p>
+            </p>
 
             {/* Key Features Pills */}
             <motion.div 

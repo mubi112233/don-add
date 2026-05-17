@@ -21,19 +21,11 @@ const fallbackCopy = {
   en: {
     badge: "Ready to Scale?",
     headlineLine1: "Start with",
-<<<<<<< HEAD
     headlineLine2: "DON ADS Today",
     subheading:
       "Book a free consultation and see how we can grow your leads and revenue in 30 days.",
     benefits: ["No setup fees", "30-day trial", "Ads experts", "Monthly reporting"],
     stats: { activeClients: "200+", avgRoi: "3× ROAS", satisfaction: "98%", fastStart: "30d" },
-=======
-    headlineLine2: "DON Recruitment Today",
-    subheading:
-      "Book a free consultation and see how we can scale your team in 7 days.",
-    benefits: ["No setup fees", "30-day trial", "Vetted VAs", "Weekly reporting"],
-    stats: { activeClients: "200+", avgRoi: "340%", satisfaction: "98%", fastStart: "30d" },
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
     statsLabels: {
       activeClients: "Active Clients",
       avgRoi: "Avg. ROAS",
@@ -55,19 +47,11 @@ const fallbackCopy = {
   ge: {
     badge: "Bereit zu skalieren?",
     headlineLine1: "Starten Sie noch heute",
-<<<<<<< HEAD
     headlineLine2: "mit DON ADS",
     subheading:
       "Buchen Sie eine kostenlose Beratung und erleben Sie, wie wir Ihre Leads und Umsätze in 30 Tagen steigern.",
     benefits: ["Keine Einrichtungsgebühren", "30-Tage-Test", "Ads-Experten", "Monatliches Reporting"],
     stats: { activeClients: "200+", avgRoi: "3× ROAS", satisfaction: "98%", fastStart: "30d" },
-=======
-    headlineLine2: "mit DON Recruitment",
-    subheading:
-      "Buchen Sie eine kostenlose Beratung und erleben Sie, wie wir Ihr Team in 7 Tagen skalieren.",
-    benefits: ["Keine Einrichtungsgebühren", "30-Tage-Test", "Geprüfte VAs", "Wöchentliches Reporting"],
-    stats: { activeClients: "200+", avgRoi: "340%", satisfaction: "98%", fastStart: "30d" },
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
     statsLabels: {
       activeClients: "Aktive Kunden",
       avgRoi: "Ø ROAS",
@@ -163,11 +147,7 @@ export async function FinalCTA({ lang }: { lang: string }) {
             </div>
           </div>
 
-<<<<<<< HEAD
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 sm:mb-8 text-white leading-[1.1] tracking-tight">
-=======
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 sm:mb-8 text-primary-foreground dark:text-white leading-[1.1]">
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
             <span className="block drop-shadow-lg">{c.headlineLine1}</span>
             <span className="relative inline-block mt-2">
               <span className="relative z-10 bg-gradient-to-r from-primary-foreground via-primary-foreground to-primary-foreground dark:from-white dark:via-white dark:to-white bg-clip-text text-transparent drop-shadow-2xl">

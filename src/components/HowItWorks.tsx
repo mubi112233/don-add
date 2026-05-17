@@ -76,7 +76,6 @@ export const HowItWorks = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-<<<<<<< HEAD
           <motion.span
             className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden"
             whileHover={{ scale: 1.05 }}
@@ -89,15 +88,6 @@ export const HowItWorks = () => {
             dangerouslySetInnerHTML={{ __html: copy.heading }}
           />
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl leading-relaxed">
-=======
-          <span className="inline-block px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-sm font-semibold rounded-full mb-4 shadow-lg">
-            {copy.badge}
-          </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-slate-900 dark:text-white">
-            {copy.heading.split(' ').slice(0, -2).join(' ')} <span className="bg-gradient-to-r from-blue-600 to-cyan-600 dark:from-cyan-400 dark:to-blue-400 bg-clip-text text-transparent">{copy.heading.split(' ').slice(-2).join(' ')}</span>
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-slate-600 dark:text-slate-300 max-w-3xl leading-relaxed">
->>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
             {copy.description}
           </p>
         </motion.div>
