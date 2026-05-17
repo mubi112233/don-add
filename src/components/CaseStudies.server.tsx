@@ -41,16 +41,26 @@ export async function CaseStudies({ lang }: { lang: string }) {
   return (
     <section
       id="case-studies"
+<<<<<<< HEAD
       className="relative py-8 sm:py-10 md:py-12 lg:py-14 bg-muted/30"
+=======
+      className="relative py-12 sm:py-16 md:py-20 lg:py-24 bg-muted/30"
+>>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
     >
-      <div className="absolute top-0 left-1/4 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-gold/5 rounded-full blur-[100px] md:blur-[150px]" />
-      <div className="absolute bottom-0 right-1/4 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-gold/5 rounded-full blur-[100px] md:blur-[150px]" />
+      <div className="absolute top-0 left-1/4 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-primary/5 rounded-full blur-[100px] md:blur-[150px]" />
+      <div className="absolute bottom-0 right-1/4 w-64 h-64 sm:w-80 sm:h-80 md:w-96 md:h-96 bg-primary/5 rounded-full blur-[100px] md:blur-[150px]" />
 
       <div className={`container mx-auto ${SPACING.container} relative z-10`}>
+<<<<<<< HEAD
         <div className="mb-8 sm:mb-10 md:mb-12 lg:mb-16 text-left">
           <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-semibold rounded-full mb-3 sm:mb-4 shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden">
             <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50" />
             <span className="relative z-10">{copy.badge}</span>
+=======
+        <div className="mb-12 sm:mb-16 lg:mb-20 text-left max-w-5xl">
+          <span className="inline-block px-4 py-2 bg-primary text-primary-foreground text-sm font-bold rounded-full mb-4 shadow-md">
+            {copy.badge}
+>>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
           </span>
           <h2
             className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-[hsl(222,47%,20%)] dark:text-white leading-tight tracking-tight"
@@ -66,7 +76,11 @@ export async function CaseStudies({ lang }: { lang: string }) {
             <Link
               key={study.id}
               href={`/${urlSeg}/case-study/${slugify(study.title)}-${study.id}`}
+<<<<<<< HEAD
               className="group bg-card border-2 border-gold/20 rounded-xl sm:rounded-2xl overflow-hidden hover:border-gold hover:shadow-[0_25px_80px_-20px_hsl(45_80%_55%/0.4)] transition-all duration-700 hover:-translate-y-2 w-full block"
+=======
+              className="group bg-background border border-border rounded-xl sm:rounded-2xl overflow-hidden hover:border-primary/50 hover:shadow-lg transition-all duration-300 hover:-translate-y-2 w-full block"
+>>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
             >
               <div className="relative h-44 sm:h-52 md:h-48 lg:h-56 overflow-hidden">
                 <Image
@@ -77,7 +91,7 @@ export async function CaseStudies({ lang }: { lang: string }) {
                   className="object-cover group-hover:scale-110 transition-transform duration-500"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-gold text-foreground text-xs font-bold rounded-full">
+                  <span className="px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full">
                     {study.industry}
                   </span>
                 </div>
@@ -90,7 +104,7 @@ export async function CaseStudies({ lang }: { lang: string }) {
                   <span>{study.stats?.timeframe}</span>
                 </div>
 
-                <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-2 sm:mb-3 text-foreground group-hover:text-gold transition-colors line-clamp-2">
+                <h3 className="text-base sm:text-lg lg:text-xl font-bold mb-2 sm:mb-3 text-foreground group-hover:text-primary transition-colors line-clamp-2">
                   {study.title}
                 </h3>
 
@@ -100,10 +114,10 @@ export async function CaseStudies({ lang }: { lang: string }) {
 
                 <div className="flex items-center justify-between">
                   <div className="flex gap-3 text-xs text-muted-foreground">
-                    <span className="text-gold font-semibold">{study.stats?.costSaved}</span>
+                    <span className="text-primary font-semibold">{study.stats?.costSaved}</span>
                     <span>{copy.labels.saved}</span>
                   </div>
-                  <div className="flex items-center gap-1 sm:gap-2 text-gold font-semibold text-xs sm:text-sm group-hover:gap-2 sm:group-hover:gap-3 transition-all">
+                  <div className="flex items-center gap-1 sm:gap-2 text-primary font-semibold text-xs sm:text-sm group-hover:gap-2 sm:group-hover:gap-3 transition-all">
                     <span className="hidden sm:inline">{copy.labels.viewFull}</span>
                     <span className="sm:hidden">{copy.labels.viewStudy}</span>
                     <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -122,7 +136,7 @@ export async function CaseStudies({ lang }: { lang: string }) {
           </p>
           <Link
             href={localizedPath((lang === "ge" ? "ge" : "en") as SiteLocale, siteConfig.routes.bookMeeting)}
-            className="inline-block w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-gold text-foreground font-bold text-base sm:text-lg rounded-2xl hover:bg-gold/90 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl text-center"
+            className="inline-block w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-primary text-primary-foreground font-bold text-base sm:text-lg rounded-2xl hover:bg-primary/90 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl text-center"
           >
             <span className="hidden sm:inline">
               {lang === "ge" ? "Kostenlose Beratung buchen" : "Book a Free Consultation"}

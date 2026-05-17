@@ -45,22 +45,28 @@
     --radius: 0.5rem;
 
     /* Custom tokens for SEO Agency */
-    --gold: 220 100% 50%;      /* Blue for highlights */
-    --gold-dark: 220 100% 40%; /* Darker blue */
-    --gold-light: 220 100% 60%; /* Lighter blue */
+    --blue: 220 100% 50%;      /* Blue for highlights */
+    --blue-dark: 220 100% 40%; /* Darker blue */
+    --blue-light: 220 100% 60%; /* Lighter blue */
     --brand-blue: 220 85% 25%; /* Dark blue for details */
     
     /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(220 100% 50%) 0%, hsl(220 85% 25%) 100%);
+    --gradient-blue: linear-gradient(135deg, hsl(220 100% 50%) 0%, hsl(220 85% 25%) 100%);
     --gradient-dark: linear-gradient(180deg, hsl(220 85% 15%) 0%, hsl(220 85% 20%) 100%);
     --gradient-light: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 15% 99%) 100%);
     
     /* Shadows */
-    --shadow-gold: 0 10px 40px -10px hsl(220 100% 50% / 0.3);
-    --shadow-gold-lg: 0 25px 80px -20px hsl(220 100% 50% / 0.4);
+    --shadow-blue: 0 10px 40px -10px hsl(220 100% 50% / 0.3);
+    --shadow-blue-lg: 0 25px 80px -20px hsl(220 100% 50% / 0.4);
+    --shadow-blue-xl: 0 20px 60px -12px hsl(220 100% 50% / 0.5);
     --shadow-elegant: 0 20px 60px -15px hsl(220 85% 25% / 0.3);
     --shadow-brutal: 8px 8px 0px hsl(220 100% 50%);
     
+    /* Legacy gold aliases - mapped to blue */
+    --gold: 220 100% 50%;
+    --gold-dark: 220 100% 40%;
+    --gold-light: 220 100% 60%;
+
     /* Transitions */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -78,6 +84,13 @@
     --sidebar-border: 220 13% 88%;
     --sidebar-ring: 220 100% 50%;
 
+    /* Chart colors */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
     /* Typographic + layout tokens */
     --heading-color: 0 0% 0%; /* Black headings */
     --heading-size: 1.5rem;
@@ -86,7 +99,7 @@
 
   .dark {
     /* Enhanced SEO Agency Dark Mode */
-    --background: 220 85% 6%; /* Deeper dark blue background */
+    --background: 220 85% 20%; /* Match section backgrounds */
     --foreground: 0 0% 98%; /* Softer white for better readability */
 
     --card: 220 85% 10%; /* Slightly lighter cards for better contrast */
@@ -127,8 +140,11 @@
     --sidebar-ring: 220 100% 65%;
 
     --heading-color: 0 0% 98%;
+    --hover: 220 35% 22%;
+    --hover-foreground: 0 0% 98%;
     --brand-blue: 220 100% 75%; /* Even brighter for dark theme visibility */
-    --gold: 220 100% 65%; /* Consistent blue highlights */
+    --blue: 220 100% 65%; /* Consistent blue highlights */
+    --gold: 220 100% 65%; /* Legacy alias */
   }
 }
 
@@ -142,17 +158,19 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-inter;
     font-feature-settings: "rlig" 1, "calt" 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold;
     color: hsl(var(--heading-color));
     transition: color 0.3s ease;
+<<<<<<< HEAD
     letter-spacing: -0.02em;
     font-weight: 700;
   }
@@ -169,6 +187,9 @@
 
   p {
     line-height: 1.7;
+=======
+    text-align: left !important;
+>>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
   }
 
   .dark {
@@ -198,12 +219,16 @@
   }
 
   ::-webkit-scrollbar-thumb:hover {
+<<<<<<< HEAD
     background: hsl(var(--gold));
     box-shadow: 0 0 8px hsl(var(--gold) / 0.5);
+=======
+    background: hsl(var(--blue));
+>>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
   }
 
   *:focus-visible {
-    outline: 2px solid hsl(var(--gold));
+    outline: 2px solid hsl(var(--blue));
     outline-offset: 2px;
     border-radius: 4px;
   }
@@ -435,12 +460,21 @@
     @apply inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-semibold;
   }
 
+  .badge-blue {
+    @apply bg-blue-500 text-white;
+  }
+
+  .badge-blue-soft {
+    @apply bg-blue-500/10 text-blue-400 border border-blue-500/20 backdrop-blur-sm;
+  }
+  
+  /* Legacy aliases */
   .badge-gold {
-    @apply bg-gold text-foreground;
+    @apply badge-blue;
   }
 
   .badge-gold-soft {
-    @apply bg-gold/10 text-gold border border-gold/20 backdrop-blur-sm;
+    @apply badge-blue-soft;
   }
 
   .card-premium {
@@ -448,19 +482,24 @@
   }
 
   .card-premium:hover {
-    @apply bg-card border-gold/50 shadow-elegant;
+    @apply bg-card border-blue-500/50 shadow-elegant;
   }
 
   .btn {
     @apply inline-flex items-center justify-center gap-2 px-6 py-3 font-semibold rounded-xl transition-all duration-300;
   }
 
-  .btn-gold {
-    @apply btn bg-gold text-foreground hover:bg-gold/90;
+  .btn-blue {
+    @apply btn bg-blue-500 text-white hover:bg-blue-500/90;
   }
 
   .btn-outline {
-    @apply btn bg-transparent border-2 border-border text-foreground hover:border-gold hover:bg-gold/5;
+    @apply btn bg-transparent border-2 border-white/20 text-white hover:border-blue-400 hover:bg-blue-500/5;
+  }
+  
+  /* Legacy alias */
+  .btn-gold {
+    @apply btn-blue;
   }
 }
 
@@ -480,7 +519,7 @@
   }
 
   .skip-to-content {
-    @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-gold focus:text-black focus:rounded-lg focus:font-semibold;
+    @apply sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:px-4 focus:py-2 focus:bg-blue-500 focus:text-white focus:rounded-lg focus:font-semibold;
   }
 
   .text-balance {
@@ -499,6 +538,7 @@
     border-width: 0;
   }
 
+<<<<<<< HEAD
   .table-zebra-invert tbody tr:nth-child(odd) {
     background-color: hsl(0 0% 100%) !important;
   }
@@ -515,5 +555,102 @@
   .table-zebra-none tbody tr:nth-child(odd),
   .table-zebra-none tbody tr:nth-child(even) {
     background-color: transparent !important;
+=======
+  /* Blue Shadow Utilities */
+  .shadow-blue {
+    box-shadow: 0 4px 20px -4px hsl(var(--blue) / 0.3);
+  }
+
+  .shadow-blue-lg {
+    box-shadow: 0 10px 40px -8px hsl(var(--blue) / 0.4);
+  }
+
+  .shadow-blue-xl {
+    box-shadow: 0 20px 60px -12px hsl(var(--blue) / 0.5);
+  }
+  
+  /* Legacy aliases */
+  .shadow-gold {
+    @apply shadow-blue;
+  }
+
+  .shadow-gold-lg {
+    @apply shadow-blue-lg;
+  }
+
+  .shadow-gold-xl {
+    @apply shadow-blue-xl;
+  }
+
+  /* Blue Gradient Utilities */
+  .bg-blue-gradient {
+    background: linear-gradient(135deg, hsl(var(--blue)), hsl(var(--blue-dark)));
+  }
+
+  .bg-blue-gradient-subtle {
+    background: linear-gradient(135deg, hsl(var(--blue) / 0.1), hsl(var(--blue) / 0.05));
+  }
+  
+  /* Legacy aliases */
+  .bg-gold-gradient {
+    @apply bg-blue-gradient;
+  }
+
+  .bg-gold-gradient-subtle {
+    @apply bg-blue-gradient-subtle;
+  }
+
+  /* Text Gradient Utilities */
+  .text-blue-gradient {
+    background: linear-gradient(135deg, hsl(var(--foreground)), hsl(var(--blue)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Legacy alias */
+  .text-gold-gradient {
+    @apply text-blue-gradient;
+  }
+
+  /* Glassmorphism Effects */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 40px -8px hsl(var(--blue) / 0.3);
+  }
+
+  /* Focus States */
+  .focus-blue:focus {
+    outline: 2px solid hsl(var(--blue));
+    outline-offset: 2px;
+  }
+  
+  /* Legacy alias */
+  .focus-gold:focus {
+    @apply focus-blue:focus;
+  }
+
+  /* Selection Styles */
+  ::selection {
+    background: hsl(var(--blue) / 0.3);
+    color: hsl(var(--foreground));
+>>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
   }
 }

@@ -6,38 +6,47 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { HelpCircle, Shield, Zap } from "lucide-react";
+import { Shield, Zap } from "lucide-react";
 import { getCopy } from "@/lib/copy";
 import type { FAQItem } from "@/lib/api";
 
 export function FAQInteractive({ faqs, lang }: { faqs: FAQItem[]; lang: string }) {
   const copy = getCopy(lang, "faq");
+  const [openItem, setOpenItem] = useState<string>("");
 
   return (
     <section
       id="faq"
+<<<<<<< HEAD
       className="relative py-8 sm:py-10 md:py-12 lg:py-14 bg-muted/30 z-80 overflow-hidden"
     >
       <div className="absolute top-20 right-10 w-64 h-64 bg-gold/5 rounded-full blur-[100px]" />
       <div className="absolute bottom-20 left-10 w-64 h-64 bg-gold/5 rounded-full blur-[100px]" />
 
       <div className="container mx-auto px-4 sm:px-6 md:px-10 lg:px-12 xl:px-16 relative z-10">
+=======
+      className="relative py-4 sm:py-6 md:py-8 lg:py-10 z-40 overflow-hidden bg-muted/30"
+    >
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 relative z-10">
+>>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
         <div className="max-w-4xl mx-auto">
           <motion.div
-            className="mb-10 sm:mb-12 md:mb-16"
+            className="mb-6 sm:mb-8 md:mb-10 lg:mb-12 text-center"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <motion.div
-              className="flex justify-center mb-5 sm:mb-6"
+            <motion.span
+              className="inline-block px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-primary-foreground text-xs sm:text-sm font-bold rounded-full mb-3 sm:mb-4 shadow-lg"
+              whileHover={{ scale: 1.05 }}
               initial={{ scale: 0.8, opacity: 0 }}
               whileInView={{ scale: 1, opacity: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2, type: "spring", stiffness: 120 }}
             >
+<<<<<<< HEAD
               <span className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 bg-gradient-to-br from-[hsl(var(--gold))] via-[hsl(var(--brand-blue))] to-[hsl(var(--gold))] text-white text-xs sm:text-sm font-semibold rounded-full shadow-[0_8px_24px_-6px_rgba(59,130,246,0.4)] border border-white/20 backdrop-blur-sm relative overflow-hidden flex items-center gap-2">
                 <span className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 opacity-50" />
                 <HelpCircle className="w-4 h-4 relative z-10" />
@@ -49,9 +58,16 @@ export function FAQInteractive({ faqs, lang }: { faqs: FAQItem[]; lang: string }
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-5 md:mb-6 text-[hsl(222,47%,20%)] dark:text-white leading-tight tracking-tight px-2 text-center"
             >
               {copy.title}
+=======
+              Got Questions?
+            </motion.span>
+
+            <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 text-foreground leading-tight">
+              {copy.title || "Frequently Asked Questions"}
+>>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-2xl leading-relaxed px-2 text-center mx-auto">
-              {copy.description}
+            <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
+              {copy.description || "Everything you need to know about our services. Can't find the answer you're looking for? Reach out to our team."}
             </p>
           </motion.div>
 
@@ -61,7 +77,13 @@ export function FAQInteractive({ faqs, lang }: { faqs: FAQItem[]; lang: string }
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
           >
-            <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
+            <Accordion
+              type="single"
+              collapsible
+              value={openItem}
+              onValueChange={setOpenItem}
+              className="space-y-3 sm:space-y-4"
+            >
               {faqs.map((faq, index) => (
                 <motion.div
                   key={faq._id || String(faq.order)}
@@ -72,17 +94,17 @@ export function FAQInteractive({ faqs, lang }: { faqs: FAQItem[]; lang: string }
                 >
                   <AccordionItem
                     value={`item-${index}`}
-                    className="group bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-xl sm:rounded-2xl px-4 sm:px-6 md:px-8 hover:border-gold hover:bg-card hover:shadow-lg transition-all duration-300 data-[state=open]:border-gold data-[state=open]:bg-card data-[state=open]:shadow-xl"
+                    className="bg-background border border-border rounded-lg sm:rounded-xl overflow-hidden hover:border-primary/50 transition-all duration-300"
                   >
-                    <AccordionTrigger className="text-left text-base sm:text-lg md:text-xl font-semibold hover:text-gold py-5 sm:py-6 hover:no-underline group-hover:text-gold transition-colors">
+                    <AccordionTrigger className="text-left text-base sm:text-lg md:text-xl font-semibold hover:text-primary py-5 sm:py-6 hover:no-underline transition-colors [&[data-state=open]>span>span:first-child]:bg-primary [&[data-state=open]>span>span:first-child]:text-primary-foreground">
                       <span className="flex items-start gap-3">
-                        <span className="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-gold/10 flex items-center justify-center text-gold text-sm font-bold mt-0.5">
+                        <span className="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-primary/10 flex items-center justify-center text-primary text-sm font-bold mt-0.5 transition-colors">
                           {index + 1}
                         </span>
                         <span className="flex-1">{faq.question}</span>
                       </span>
                     </AccordionTrigger>
-                    <AccordionContent className="text-sm sm:text-base text-muted-foreground leading-relaxed pt-2 pb-5 sm:pb-6 pl-9 sm:pl-10">
+                    <AccordionContent className="px-4 sm:px-5 md:px-6 pb-4 sm:pb-5 md:pb-6 text-sm sm:text-base text-muted-foreground leading-relaxed">
                       {faq.answer}
                     </AccordionContent>
                   </AccordionItem>
@@ -98,10 +120,10 @@ export function FAQInteractive({ faqs, lang }: { faqs: FAQItem[]; lang: string }
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
           >
-            <div className="p-5 sm:p-6 bg-gradient-to-br from-gold/10 via-gold/5 to-transparent backdrop-blur-sm border-2 border-gold/20 rounded-xl sm:rounded-2xl group hover:border-gold/40 transition-all duration-300">
+            <div className="p-5 sm:p-6 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent backdrop-blur-sm border-2 border-primary/20 rounded-xl sm:rounded-2xl group hover:border-primary/40 transition-all duration-300">
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 p-3 bg-gold/20 rounded-xl group-hover:bg-gold/30 transition-colors">
-                  <Shield className="w-6 h-6 text-gold" />
+                <div className="flex-shrink-0 p-3 bg-primary/20 rounded-xl group-hover:bg-primary/30 transition-colors">
+                  <Shield className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-base sm:text-lg font-bold text-foreground mb-1.5">
@@ -112,10 +134,10 @@ export function FAQInteractive({ faqs, lang }: { faqs: FAQItem[]; lang: string }
               </div>
             </div>
 
-            <div className="p-5 sm:p-6 bg-gradient-to-br from-gold/10 via-gold/5 to-transparent backdrop-blur-sm border-2 border-gold/20 rounded-xl sm:rounded-2xl group hover:border-gold/40 transition-all duration-300">
+            <div className="p-5 sm:p-6 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent backdrop-blur-sm border-2 border-primary/20 rounded-xl sm:rounded-2xl group hover:border-primary/40 transition-all duration-300">
               <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 p-3 bg-gold/20 rounded-xl group-hover:bg-gold/30 transition-colors">
-                  <Zap className="w-6 h-6 text-gold" />
+                <div className="flex-shrink-0 p-3 bg-primary/20 rounded-xl group-hover:bg-primary/30 transition-colors">
+                  <Zap className="w-6 h-6 text-primary" />
                 </div>
                 <div>
                   <h3 className="text-base sm:text-lg font-bold text-foreground mb-1.5">
@@ -128,13 +150,13 @@ export function FAQInteractive({ faqs, lang }: { faqs: FAQItem[]; lang: string }
           </motion.div>
 
           <motion.div
-            className="mt-8 sm:mt-10 md:mt-12 p-6 sm:p-8 bg-card/50 backdrop-blur-sm border-2 border-border/50 rounded-xl sm:rounded-2xl text-center"
+            className="mt-8 sm:mt-10 md:mt-12 p-6 sm:p-8 bg-background border-2 border-border rounded-xl sm:rounded-2xl text-center"
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5, ease: "easeOut" }}
           >
-            <p className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2">
+            <p className="text-sm sm:text-base md:text-lg font-semibold text-foreground pr-4">
               {copy.stillHaveQuestionsTitle}
             </p>
             <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-5">
@@ -143,13 +165,13 @@ export function FAQInteractive({ faqs, lang }: { faqs: FAQItem[]; lang: string }
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center px-6 py-3 bg-gold text-foreground font-semibold rounded-xl hover:bg-gold/90 transition-all duration-300 hover:scale-105"
+                className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-xl hover:bg-primary/90 transition-all duration-300 hover:scale-105"
               >
                 {copy.contactSupport}
               </a>
               <a
                 href="#pricing"
-                className="inline-flex items-center justify-center px-6 py-3 bg-transparent border-2 border-border text-foreground font-semibold rounded-xl hover:border-gold hover:bg-gold/5 transition-all duration-300"
+                className="inline-flex items-center justify-center px-6 py-3 bg-transparent border-2 border-border text-foreground font-semibold rounded-xl hover:border-primary hover:bg-primary/5 transition-all duration-300"
               >
                 {copy.viewPricing}
               </a>

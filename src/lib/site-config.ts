@@ -17,11 +17,19 @@ export interface SiteConfig {
 }
 
 export const siteConfig: SiteConfig = {
+<<<<<<< HEAD
   brandName: "DON ADS",
   brandMarkText: "D",
   defaultLocale: "en",
   apiBase: process.env.NEXT_PUBLIC_API_BASE || "https://api.don-va.com",
   tenantId: process.env.NEXT_PUBLIC_TENANT_ID || "callcenter",
+=======
+  brandName: "TalentSource",
+  brandMarkText: "T",
+  defaultLocale: "en",
+  apiBase: process.env.NEXT_PUBLIC_API_BASE || "https://api.don-va.com",
+  tenantId: process.env.NEXT_PUBLIC_TENANT_ID || "recrtment",
+>>>>>>> 9e8183ea45ea299f0dde12c6351b616676beabba
   routes: {
     bookMeeting: "/book-meeting",
     contact: "/contact",
