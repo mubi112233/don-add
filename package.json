@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "cd seo && npm run dev",
+    "build": "cd seo && npm run build",
+    "start": "cd seo && npm run start",
+    "vercel-build": "cd seo && npm install && npm run build"
+  },
+  "engines": {
+    "node": ">=18.18.0"
+  }
+}
